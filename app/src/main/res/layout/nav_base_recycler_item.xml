@@ -7,10 +7,13 @@
     tools:background="@color/black">
 
     <LinearLayout
-        android:id="@+id/ll1"
-        android:layout_width="wrap_content"
+        android:id="@+id/llBaseRecycler"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
         android:layout_marginBottom="5dp">
 
         <ImageView
@@ -22,6 +25,7 @@
             android:src="@drawable/home_icon" />
 
         <TextView
+            android:id="@+id/nav_base_recycler_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -37,7 +41,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        tools:listitem="@layout/nav_sub_recycler_item"/>
+        tools:listitem="@layout/nav_sub_recycler_item"
+        android:visibility="gone"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
