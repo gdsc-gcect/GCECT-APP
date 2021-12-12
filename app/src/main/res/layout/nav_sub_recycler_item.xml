@@ -41,7 +41,6 @@
         android:id="@+id/nav_sub_sub_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
         android:visibility="gone"
         tools:listitem="@layout/nav_sub_sub_recycler_item"/>
 </LinearLayout>
