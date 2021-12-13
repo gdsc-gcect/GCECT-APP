@@ -11,6 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.sitamadex11.gcectapp.R
 import com.sitamadex11.gcectapp.adapters.HomeBottomSheetRecyclerAdapter
 import com.sitamadex11.gcectapp.adapters.HomeGateRankerRecyclerAdapter
@@ -36,6 +37,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.homeFragment = this
         //#2 Initializing the BottomSheetBehavior
         val bottomSheetLayout = binding.layoutBottomSheet
         val bottomSheetView: View =
@@ -68,5 +70,9 @@ class HomeFragment : Fragment() {
         val rvGeneralNotice = binding.layoutBottomSheet.rootView.findViewById<RecyclerView>(R.id.rvGeneralNotice)
         rvGeneralNotice.layoutManager = LinearLayoutManager(requireContext())
         rvGeneralNotice.adapter = generalNoticeAdapter
+    }
+
+    fun onGeneralNoticeClicked(){
+        bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
     }
 }

@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+      <variable
+          name="homeFragment"
+          type="com.sitamadex11.gcectapp.ui.fragments.HomeFragment" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -158,6 +160,7 @@
 
         <include
             android:id="@+id/layoutBottomSheet"
-            layout="@layout/home_page_bottom_sheet" />
+            layout="@layout/home_page_bottom_sheet"
+            android:onClick="@{() -> homeFragment.onGeneralNoticeClicked()}"/>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

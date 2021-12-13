@@ -19,6 +19,7 @@
     android:text="HYBRID ROUTINE FOR CT 3RD, 5TH and 7TH SEMESTER, 2021 CLICK HERE"
     android:fontFamily="@font/roboto_medium"
     android:textSize="13sp"
+    android:layout_marginStart="5dp"
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp"
     android:textColor="@color/black"/>
