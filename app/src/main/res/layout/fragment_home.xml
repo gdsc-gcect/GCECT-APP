@@ -1,8 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.fragments.HomeFragment">
 
-</FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/home_header_college_img" />
+
+    <ImageView
+        android:id="@+id/auto_slider"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/demo_pic" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNotice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/auto_slider"
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/recycler_notice_item"
+        tools:itemCount="1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGateRanker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rvNotice"
+        tools:listitem="@layout/recycler_gate_ranker_item"
+        android:layout_marginTop="10dp"
+        tools:itemCount="1" />
+</RelativeLayout>
