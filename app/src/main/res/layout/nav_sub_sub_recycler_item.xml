@@ -20,8 +20,8 @@
 
         <ImageView
             android:id="@+id/nav_sub_sub_recycler_icon"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_gravity="center_vertical"
             android:scaleType="fitCenter"
             tools:src="@drawable/home_icon" />

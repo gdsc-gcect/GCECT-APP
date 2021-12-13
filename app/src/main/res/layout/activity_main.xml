@@ -25,7 +25,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:elevation="2dp"
-                android:src="@drawable/hamburger_icon_blue" />
+                android:src="@drawable/hamburger_icon" />
 
             <fragment
                 android:id="@+id/fragment"
@@ -41,6 +41,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="@drawable/nav_drawer_background"
+            android:paddingBottom="10dp"
             android:orientation="vertical">
 
             <RelativeLayout

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/nav_sub_sub_recycler_icon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitCenter"
+        android:src="@drawable/download_icon" />
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="HYBRID ROUTINE FOR CT 3RD, 5TH and 7TH SEMESTER, 2021 CLICK HERE"
+    android:fontFamily="@font/roboto_medium"
+    android:textSize="13sp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:textColor="@color/black"/>
+</LinearLayout>
