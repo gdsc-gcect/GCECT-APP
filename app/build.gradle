@@ -62,4 +62,8 @@ dependencies {
 
     // For circular image view
     implementation 'com.mikhaellopez:circularimageview:4.3.0'
+
+    //auto-image slider
+
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
 }
