@@ -47,8 +47,9 @@ class MainActivityViewModel: ViewModel() {
     }
 
     private fun setNullToSubItemList():List<NavSubItem?>{
-        navSubItemList.add(null)
-        return navSubItemList
+        val subList = ArrayList<NavSubItem?>()
+        subList.add(null)
+        return subList
     }
 
     private fun addHomeToMainList(){

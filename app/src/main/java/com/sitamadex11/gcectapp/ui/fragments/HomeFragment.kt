@@ -11,7 +11,6 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.sitamadex11.gcectapp.R
 import com.sitamadex11.gcectapp.adapters.HomeBottomSheetRecyclerAdapter
 import com.sitamadex11.gcectapp.adapters.HomeGateRankerRecyclerAdapter
@@ -53,26 +52,32 @@ class HomeFragment : Fragment() {
          * for notice list showing
          */
         val noticeAdapter = HomeNoticeRecyclerAdapter()
-        binding.rvNotice.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL, false)
+        binding.rvNotice.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.rvNotice.adapter = noticeAdapter
 
         /**
          * for gate ranker list showing
          */
         val gateRankerAdapter = HomeGateRankerRecyclerAdapter()
-        binding.rvGateRanker.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL, false)
+        binding.rvGateRanker.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.rvGateRanker.adapter = gateRankerAdapter
 
         /**
          * for gate ranker list showing
          */
         val generalNoticeAdapter = HomeBottomSheetRecyclerAdapter()
-        val rvGeneralNotice = binding.layoutBottomSheet.rootView.findViewById<RecyclerView>(R.id.rvGeneralNotice)
+        val rvGeneralNotice =
+            binding.layoutBottomSheet.rootView.findViewById<RecyclerView>(R.id.rvGeneralNotice)
         rvGeneralNotice.layoutManager = LinearLayoutManager(requireContext())
         rvGeneralNotice.adapter = generalNoticeAdapter
+
     }
 
-    fun onGeneralNoticeClicked(){
+    fun onGeneralNoticeClicked() {
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
     }
+
+
 }

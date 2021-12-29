@@ -5,4 +5,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="gate_rank">Gate Rank: %d</string>
+    <string name="research_dev_p1">The Institute has highly qualified faculty members where 35% of them are Doctorate Degree Holders.
+        The rest are Post Graduate Degree holders out of which most of them are pursuing their Ph.D degrees.
+        Over the last one year, the college has produced 5 Ph.Ds from both engineering and science departments.\n\n
+        The faculty has contributed more than 100 research papers and presentations in Indian as well as International journals.
+        Besides, several Research and Development projects sponsored by Department of Science and Technology(DST), University Grants Commission(UGC), All India Council of Technical Education(AICTE) etc are running some of which have been successfully completed.
+        All these accomplishments definitely prove that this institute is a ground for nurturing intellects.
+        The faculty members have contributed to books by reputed publishers, research papers in international journals of repute and international conference proceedings.\n\n
+        The institute has also received grant from the World Bank in the TEQIP-1 Phase for various developmental projects.</string>
 </resources>
