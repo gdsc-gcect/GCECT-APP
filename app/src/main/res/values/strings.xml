@@ -12,5 +12,20 @@
         Besides, several Research and Development projects sponsored by Department of Science and Technology(DST), University Grants Commission(UGC), All India Council of Technical Education(AICTE) etc are running some of which have been successfully completed.
         All these accomplishments definitely prove that this institute is a ground for nurturing intellects.
         The faculty members have contributed to books by reputed publishers, research papers in international journals of repute and international conference proceedings.\n\n
-        The institute has also received grant from the World Bank in the TEQIP-1 Phase for various developmental projects.</string>
+        The institute has also received grant from the World Bank in the TEQIP-1 Phase for various developmental projects.\n\n
+        This grant has been spent for:\n\n
+    </string>
+    <string name="research_dev_p2">
+        ⚫ Development of Infrastructure.\n
+        ⚫ New Laboratory equipments.\n
+        ⚫ Maintenance and repair of old laboratory equipments.\n
+        ⚫ Funding for research and lectures attended by faculty in foreign universities.\n
+        ⚫ Aim towards community development implementation of tribal development plan for students and overall growth.
+    </string>
+    <string name="research_dev_p3">A detailed list of Research Projects under various departments which are running and some of which have been successfully completed have been listed below:</string>
+    <string name="r_d_project_title">Title : %s</string>
+    <string name = "r_d_project_funding_agency">Funding Agency : %s</string>
+    <string name = "r_d_project_amount">Amount: %s</string>
+    <string name = "r_d_project_status">Status: %s</string>
+    <string name = "r_d_teacher_detail">%s,\n%s</string>
 </resources>

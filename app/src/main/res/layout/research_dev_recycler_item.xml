@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/llTeacherDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/gcect_logo" />
+
+        <TextView
+            android:id="@+id/txtTeacherDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto_medium"
+            tools:text="Dr. Saikat Maitra,\nProfessor (CT) and Officer-in-Charge"
+            android:textColor="#000068"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llTeacherDetail"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32.5dp"
+            android:background="@drawable/blue_gradient_background">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/subRVProjectDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="35dp"
+                android:visibility="gone"
+                tools:itemCount="2"
+                tools:listitem="@layout/research_dev_recycler_sub_item" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="32.5dp"
+            android:background="#000068" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:backgroundTint="#000068"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingStart="30dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="15dp"
+            android:text="View More"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:cornerRadius="30dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="0.5dp" />
+    </FrameLayout>
+</RelativeLayout>
