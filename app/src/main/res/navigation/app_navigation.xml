@@ -7,23 +7,23 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.sitamadex11.gcectapp.ui.fragments.HomeFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
     </fragment>
     <fragment
         android:id="@+id/contactUsFragment"
-        android:name="com.sitamadex11.gcectapp.ui.fragments.ContactUsFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.ContactUsFragment"
         android:label="fragment_contact_us"
         tools:layout="@layout/fragment_contact_us" />
     <fragment
         android:id="@+id/researchDevelopmentFragment"
-        android:name="com.sitamadex11.gcectapp.ui.fragments.ResearchDevelopmentFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.ResearchDevelopmentFragment"
         android:label="fragment_research_development"
         tools:layout="@layout/fragment_research_development" />
     <fragment
         android:id="@+id/departmentCTFragment"
-        android:name="com.sitamadex11.gcectapp.ui.fragments.DepartmentCTFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.DepartmentCTFragment"
         android:label="fragment_department_c_t"
         tools:layout="@layout/fragment_department_c_t" />
 </navigation>

@@ -5,7 +5,7 @@
     <data>
       <variable
           name="homeFragment"
-          type="com.sitamadex11.gcectapp.ui.fragments.HomeFragment" />
+          type="com.gcect.gcectapp.ui.fragments.HomeFragment" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout

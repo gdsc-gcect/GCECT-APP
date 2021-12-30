@@ -3,13 +3,14 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
+    id 'com.google.gms.google-services'
 }
 
 android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.sitamadex11.gcectapp"
+        applicationId "com.gcect.gcectapp"
         minSdk 23
         targetSdk 31
         versionCode 1
@@ -63,4 +64,11 @@ dependencies {
 
     // For circular image view
     implementation 'com.mikhaellopez:circularimageview:4.3.0'
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+
+    // Firebase analytics
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
 }
