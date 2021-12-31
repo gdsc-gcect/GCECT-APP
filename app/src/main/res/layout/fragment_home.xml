@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:alpha="0.9"
-                android:background="@drawable/home_header_college_img" />
+                android:background ="@drawable/home_header_college_img" />
 
             <com.smarteist.autoimageslider.SliderView
                 android:id="@+id/image_slider"

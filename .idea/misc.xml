@@ -21,6 +21,7 @@
         <entry key="..\:/android_project_folder/Big Projects/GCECT_APP/app/src/main/res/layout/fragment_department_c_t.xml" value="0.23324275362318841" />
         <entry key="..\:/android_project_folder/Big Projects/GCECT_APP/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/android_project_folder/Big Projects/GCECT_APP/app/src/main/res/layout/fragment_research_development.xml" value="0.19403578528827037" />
+        <entry key="..\:/android_project_folder/Big Projects/GCECT_APP/app/src/main/res/layout/fragment_science_voyage.xml" value="0.24094202898550723" />
         <entry key="..\:/android_project_folder/Big Projects/GCECT_APP/app/src/main/res/layout/home_page_bottom_sheet.xml" value="0.24048913043478262" />
         <entry key="..\:/android_project_folder/Big Projects/GCECT_APP/app/src/main/res/layout/home_page_bottom_sheet_list_item.xml" value="0.24048913043478262" />
         <entry key="..\:/android_project_folder/Big Projects/GCECT_APP/app/src/main/res/layout/nav_base_recycler_item.xml" value="0.25416666666666665" />
@@ -43,7 +44,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
