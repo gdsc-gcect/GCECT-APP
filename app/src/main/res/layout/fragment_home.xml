@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
       <variable
@@ -22,20 +23,36 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
+                android:alpha="0.9"
                 android:background="@drawable/home_header_college_img" />
 
-            <ImageView
-                android:id="@+id/auto_slider"
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/image_slider"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="75dp"
-                android:src="@drawable/demo_pic" />
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="#0C2ABF"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="2"
+                app:sliderStartAutoCycle="true" />
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvNotice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/auto_slider"
+                android:layout_below="@id/image_slider"
                 android:layout_marginTop="10dp"
                 tools:itemCount="1"
                 tools:listitem="@layout/recycler_notice_item" />
