@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     var images = intArrayOf(
         R.drawable.sliderimage,
         R.drawable.sliderimage2,
-        R.drawable.sliderimage3,
+        R.drawable.sliderimage3
 //        android.R.drawable.four,
 //        android.R.drawable.five,
 //        android.R.drawable.six

@@ -23,7 +23,7 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:alpha="0.5"
+                android:alpha="0.9"
                 android:background="@drawable/home_header_college_img" />
 
             <com.smarteist.autoimageslider.SliderView
@@ -31,10 +31,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="75dp"
-
-
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
                 app:sliderAnimationDuration="600"
                 app:sliderAutoCycleDirection="back_and_forth"
                 app:sliderAutoCycleEnabled="true"
@@ -47,21 +45,14 @@
                 app:sliderIndicatorSelectedColor="#0C2ABF"
                 app:sliderIndicatorUnselectedColor="#FFF"
                 app:sliderScrollTimeInSec="2"
-                app:sliderStartAutoCycle="true"
+                app:sliderStartAutoCycle="true" />
 
-                />
-
-            <ImageView
-                android:id="@+id/auto_slider"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="75dp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvNotice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/auto_slider"
+                android:layout_below="@id/image_slider"
                 android:layout_marginTop="10dp"
                 tools:itemCount="1"
                 tools:listitem="@layout/recycler_notice_item" />
