@@ -61,6 +61,10 @@ class NavSubRecyclerAdapter(
                             setBlueHamburgerIcon()
                             navigate(R.id.scientificVoyageFragment)
                         }
+                        "Workshop Seminar" -> {
+                            setBlueHamburgerIcon()
+                            navigate(R.id.workshopSeminarFragment)
+                        }
                     }
                 }
 

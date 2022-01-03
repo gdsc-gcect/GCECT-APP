@@ -31,4 +31,9 @@
         android:name="com.gcect.gcectapp.ui.fragments.ScientificVoyageFragment"
         android:label="ScienceVoyageFragment"
         tools:layout="@layout/fragment_scientific_voyage"/>
+    <fragment
+        android:id="@+id/workshopSeminarFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.WorkshopSeminarFragment"
+        android:label="WorkshopSeminarFragment"
+        tools:layout="@layout/pdf_viewer_without_download"/>
 </navigation>

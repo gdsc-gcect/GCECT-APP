@@ -72,6 +72,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
     //auto-image slider
-
     implementation 'com.github.smarteist:autoimageslider:1.4.0'
+
+    //Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2-native-mt'
+
+    // PDF view
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
 }
