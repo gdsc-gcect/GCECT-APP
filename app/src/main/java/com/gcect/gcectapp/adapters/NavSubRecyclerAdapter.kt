@@ -77,6 +77,10 @@ class NavSubRecyclerAdapter(
                             setWhiteHamburgerIcon()
                             navigate(R.id.NSSFragment)
                         }
+                        "Placement Cell" -> {
+                            setBlueHamburgerIcon()
+                            navigate(R.id.placementCellFragment)
+                        }
                     }
                 }
 
