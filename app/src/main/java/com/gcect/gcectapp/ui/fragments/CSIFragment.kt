@@ -21,7 +21,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
-class WorkshopSeminarFragment : Fragment() {
+class CSIFragment : Fragment() {
     private lateinit var binding: PdfViewerWithoutDownloadBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,10 +31,9 @@ class WorkshopSeminarFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater,R.layout.pdf_viewer_without_download, container, false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.txtPageTitle.text = "Workshop Seminar"
+        binding.txtPageTitle.text = "CSI Student Chapter"
         binding.pdfLoadingProgress.visibility = View.VISIBLE
 
         CoroutineScope(Dispatchers.Main).launch {

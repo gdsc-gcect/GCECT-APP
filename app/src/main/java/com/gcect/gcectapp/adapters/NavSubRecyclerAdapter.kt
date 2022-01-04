@@ -65,6 +65,14 @@ class NavSubRecyclerAdapter(
                             setBlueHamburgerIcon()
                             navigate(R.id.workshopSeminarFragment)
                         }
+                        "CSI Student Chapter" -> {
+                            setBlueHamburgerIcon()
+                            navigate(R.id.CSIFragment)
+                        }
+                        "Students' Welfare Associations" -> {
+                            setBlueHamburgerIcon()
+                            navigate(R.id.welfareFragment)
+                        }
                     }
                 }
 

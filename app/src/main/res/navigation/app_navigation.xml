@@ -36,4 +36,14 @@
         android:name="com.gcect.gcectapp.ui.fragments.WorkshopSeminarFragment"
         android:label="WorkshopSeminarFragment"
         tools:layout="@layout/pdf_viewer_without_download"/>
+    <fragment
+        android:id="@+id/CSIFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.CSIFragment"
+        android:label="CSIFragment"
+        tools:layout="@layout/pdf_viewer_without_download"/>
+    <fragment
+        android:id="@+id/welfareFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.WelfareFragment"
+        android:label="WelfareFragment"
+        tools:layout="@layout/pdf_viewer_without_download"/>
 </navigation>
