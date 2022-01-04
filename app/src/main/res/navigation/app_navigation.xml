@@ -46,4 +46,9 @@
         android:name="com.gcect.gcectapp.ui.fragments.WelfareFragment"
         android:label="WelfareFragment"
         tools:layout="@layout/pdf_viewer_without_download"/>
+    <fragment
+        android:id="@+id/NSSFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.NSSFragment"
+        android:label="NSSFragment"
+        tools:layout="@layout/fragment_n_s_s"/>
 </navigation>

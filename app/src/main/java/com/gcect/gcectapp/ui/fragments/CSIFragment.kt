@@ -37,7 +37,7 @@ class CSIFragment : Fragment() {
         binding.pdfLoadingProgress.visibility = View.VISIBLE
 
         CoroutineScope(Dispatchers.Main).launch {
-            retrivePDFFromUrl(Constants.workshopSeminarPdfUrl)
+            retrivePDFFromUrl(Constants.csiPdfUrl)
         }
     }
 

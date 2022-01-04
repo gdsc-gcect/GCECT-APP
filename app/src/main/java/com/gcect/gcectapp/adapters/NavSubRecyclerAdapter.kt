@@ -73,6 +73,10 @@ class NavSubRecyclerAdapter(
                             setBlueHamburgerIcon()
                             navigate(R.id.welfareFragment)
                         }
+                        "NSS" -> {
+                            setWhiteHamburgerIcon()
+                            navigate(R.id.NSSFragment)
+                        }
                     }
                 }
 

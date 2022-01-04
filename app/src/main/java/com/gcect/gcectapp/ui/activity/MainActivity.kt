@@ -14,7 +14,7 @@ import com.gcect.gcectapp.adapters.NavBaseRecyclerAdapter
 import com.gcect.gcectapp.databinding.ActivityMainBinding
 import com.gcect.gcectapp.viewmodels.MainActivityViewModel
 import com.gcect.gcectapp.viewmodels.MainActivityViewModelFactory
-import com.gcect.gcectapp.adapters.SliderAdapter
+import com.gcect.gcectapp.adapters.HomeAutoSliderAdapter
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         //auto image slider
         sliderView = findViewById(R.id.image_slider)
 
-        val sliderAdapter = SliderAdapter(images)
+        val sliderAdapter = HomeAutoSliderAdapter(images)
 
         sliderView.setSliderAdapter(sliderAdapter)
         sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM)

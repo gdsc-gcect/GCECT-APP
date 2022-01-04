@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="nssFragment"
+            type="com.gcect.gcectapp.ui.fragments.NSSFragment" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.NSSFragment">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:alpha="0.9"
+            android:background="@drawable/home_header_college_img">
+
+            <TextView
+                android:id="@+id/txtPageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="58dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="NSS"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="75dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMarginBottom="10dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="#0C2ABF"
+            app:sliderIndicatorUnselectedColor="#FFF"
+            app:sliderScrollTimeInSec="2"
+            app:sliderStartAutoCycle="true"
+            tools:listItem="@layout/nss_slider_item" />
+
+        <TextView
+            android:id="@+id/txtNssInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_slider"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/nss_p"
+            android:textAlignment="center"
+            android:textColor="#000062"
+            android:textSize="18sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGoToWebsite"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_below="@+id/txtNssInfo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#000068"
+            android:fontFamily="@font/roboto_bold"
+            android:onClick="@{() -> nssFragment.onWatchVideoBtnClick()}"
+            android:paddingStart="30dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="15dp"
+            android:text="Watch Video"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:cornerRadius="30dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="0.5dp" />
+    </RelativeLayout>
+</layout>
