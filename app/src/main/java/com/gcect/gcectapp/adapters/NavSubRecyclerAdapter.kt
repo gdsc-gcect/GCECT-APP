@@ -81,6 +81,10 @@ class NavSubRecyclerAdapter(
                             setBlueHamburgerIcon()
                             navigate(R.id.placementCellFragment)
                         }
+                        "Placement Overview" -> {
+                            setBlueHamburgerIcon()
+                            navigate(R.id.placementOverViewFragment)
+                        }
                     }
                 }
 

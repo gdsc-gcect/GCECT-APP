@@ -56,4 +56,9 @@
         android:name="com.gcect.gcectapp.ui.fragments.PlacementCellFragment"
         android:label="PlacementCellFragment"
         tools:layout="@layout/static_text_fragments_with_yellow_background"/>
+    <fragment
+        android:id="@+id/placementOverViewFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.PlacementOverViewFragment"
+        android:label="PlacementOverViewFragment"
+        tools:layout="@layout/static_text_fragments_with_yellow_background"/>
 </navigation>
