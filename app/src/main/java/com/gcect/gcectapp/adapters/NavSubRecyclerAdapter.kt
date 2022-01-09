@@ -15,13 +15,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gcect.gcectapp.R
 import com.gcect.gcectapp.model.NavSubItem
 import com.gcect.gcectapp.viewmodels.MainActivityViewModel
+import com.gcect.gcectapp.viewmodels.PdfViewerViewModel
 
 class NavSubRecyclerAdapter(
     private val context: Context,
     private val navController: NavController,
     private val imgHamburger:ImageView,
     private val drawerLayout: DrawerLayout,
-    private val mainViewModel: MainActivityViewModel
+    private val mainViewModel: MainActivityViewModel,
+    private val pdfLoaderViewModel: PdfViewerViewModel
 ) : RecyclerView.Adapter<NavSubRecyclerAdapter.NavSubRecyclerViewHolder>() {
     private val list = ArrayList<NavSubItem?>()
 
@@ -113,7 +115,7 @@ class NavSubRecyclerAdapter(
         // Setting the layout manager
         recyclerView.layoutManager = LinearLayoutManager(context)
         // This will pass the ArrayList to our Adapter
-        val adapter = NavSubSubRecyclerAdapter(navController,imgHamburger, drawerLayout,mainViewModel)
+        val adapter = NavSubSubRecyclerAdapter(navController,imgHamburger, drawerLayout,mainViewModel,pdfLoaderViewModel)
         // Setting the Adapter with the recyclerview
         adapter.updateList(list[position]!!.navSubSubItemList)
         recyclerView.adapter = adapter

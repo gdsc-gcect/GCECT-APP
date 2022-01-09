@@ -67,8 +67,8 @@
         android:label="ExamScheduleFragment"
         tools:layout="@layout/examination_schedule_page">
         <action
-            android:id="@+id/action_examScheduleFragment_to_pdfViewerFragment"
-            app:destination="@id/pdfViewerFragment" />
+            android:id="@+id/action_examScheduleFragment_to_schedulePdfViewerFragment"
+            app:destination="@id/schedulePdfViewerFragment" />
     </fragment>
     <fragment
         android:id="@+id/evenSemScheduleFragment"
@@ -77,7 +77,7 @@
         tools:layout="@layout/examination_schedule_list_page">
         <action
             android:id="@+id/action_evenSemScheduleFragment_to_pdfViewerFragment"
-            app:destination="@id/pdfViewerFragment" />
+            app:destination="@id/schedulePdfViewerFragment" />
     </fragment>
     <fragment
         android:id="@+id/oddSemScheduleFragment"
@@ -86,15 +86,20 @@
         tools:layout="@layout/examination_schedule_list_page">
         <action
             android:id="@+id/action_oddSemScheduleFragment_to_pdfViewerFragment"
-            app:destination="@id/pdfViewerFragment" />
+            app:destination="@id/schedulePdfViewerFragment" />
     </fragment>
     <fragment
-        android:id="@+id/pdfViewerFragment"
-        android:name="com.gcect.gcectapp.ui.fragments.PdfViewerFragment"
+        android:id="@+id/schedulePdfViewerFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.SchedulePdfViewerFragment"
         android:label="PdfViewerFragment"
         tools:layout="@layout/pdf_viewer_with_download">
         <action
             android:id="@+id/action_pdfViewerFragment_to_examScheduleFragment"
             app:destination="@id/examScheduleFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/pdfViewerFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.PdfViewerFragment"
+        android:label="PdfViewerFragment"
+        tools:layout="@layout/pdf_viewer_with_download"/>
 </navigation>

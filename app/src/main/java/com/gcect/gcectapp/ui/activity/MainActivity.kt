@@ -15,6 +15,8 @@ import com.gcect.gcectapp.databinding.ActivityMainBinding
 import com.gcect.gcectapp.viewmodels.MainActivityViewModel
 import com.gcect.gcectapp.viewmodels.MainActivityViewModelFactory
 import com.gcect.gcectapp.adapters.HomeAutoSliderAdapter
+import com.gcect.gcectapp.viewmodels.PdfViewerViewModel
+import com.gcect.gcectapp.viewmodels.PdfViewerViewModelFactory
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
@@ -22,6 +24,7 @@ import com.smarteist.autoimageslider.SliderView
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var viewModel: MainActivityViewModel
+    private lateinit var pdfLoaderViewModel: PdfViewerViewModel
     private lateinit var binding: ActivityMainBinding
 
     //auto img slider
@@ -43,6 +46,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             this,
             MainActivityViewModelFactory()
         ).get(MainActivityViewModel::class.java)
+
+        pdfLoaderViewModel = ViewModelProvider(
+            this,
+            PdfViewerViewModelFactory()
+        ).get(PdfViewerViewModel::class.java)
+
         // finding the navController
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
@@ -55,7 +64,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         recyclerview.layoutManager = LinearLayoutManager(this)
         // This will pass the ArrayList to our Adapter
         val adapter =
-            NavBaseRecyclerAdapter(this, navController, binding.imgHamburger, binding.drawerLayout,viewModel)
+            NavBaseRecyclerAdapter(this, navController, binding.imgHamburger, binding.drawerLayout,viewModel,pdfLoaderViewModel)
         adapter.updateList(viewModel.mainList)
         // Setting the Adapter with the recyclerview
         recyclerview.adapter = adapter

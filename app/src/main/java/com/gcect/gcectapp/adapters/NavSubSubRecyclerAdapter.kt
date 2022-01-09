@@ -12,13 +12,16 @@ import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import com.gcect.gcectapp.R
 import com.gcect.gcectapp.model.NavSubSubItem
+import com.gcect.gcectapp.utils.Constants
 import com.gcect.gcectapp.viewmodels.MainActivityViewModel
+import com.gcect.gcectapp.viewmodels.PdfViewerViewModel
 
 class NavSubSubRecyclerAdapter(
     private val navController: NavController,
     private val imgHamburger: ImageView,
     private val drawerLayout: DrawerLayout,
-    private val mainViewModel: MainActivityViewModel
+    private val mainViewModel: MainActivityViewModel,
+    private val pdfLoaderViewModel: PdfViewerViewModel
 ) : RecyclerView.Adapter<NavSubSubRecyclerAdapter.NavSubSubRecyclerViewHolder>() {
 
     private val list = ArrayList<NavSubSubItem?>()
@@ -58,6 +61,38 @@ class NavSubSubRecyclerAdapter(
                         setBlueHamburgerIcon()
                         mainViewModel.setExamScheduleYear(20)
                         navigate(R.id.examScheduleFragment)
+                    }
+                    "UG Batch 2016-20, 2017-21 & PG Batch  2018-20, 2019-21" -> {
+                        setBlueHamburgerIcon()
+                        pdfLoaderViewModel.apply {
+                            setPdfUrl(Constants.csiPdfUrl)
+                            setCurrentDestinationId(navController.currentDestination!!.id)
+                        }
+                        navigate(R.id.pdfViewerFragment)
+                    }
+                    "UG Batch 2015-19" -> {
+                        setBlueHamburgerIcon()
+                        pdfLoaderViewModel.apply {
+                            setPdfUrl(Constants.csiPdfUrl)
+                            setCurrentDestinationId(navController.currentDestination!!.id)
+                        }
+                        navigate(R.id.pdfViewerFragment)
+                    }
+                    "UG Batch 2014-18 & PG Batch 2016-18" -> {
+                        setBlueHamburgerIcon()
+                        pdfLoaderViewModel.apply {
+                            setPdfUrl(Constants.csiPdfUrl)
+                            setCurrentDestinationId(navController.currentDestination!!.id)
+                        }
+                        navigate(R.id.pdfViewerFragment)
+                    }
+                    "UG Batch 2012-16, 2013-17 & PG Batch 2012-14, 2013-15, 2014-16, 2015-17" -> {
+                        setBlueHamburgerIcon()
+                        pdfLoaderViewModel.apply {
+                            setPdfUrl(Constants.csiPdfUrl)
+                            setCurrentDestinationId(navController.currentDestination!!.id)
+                        }
+                        navigate(R.id.pdfViewerFragment)
                     }
                 }
             }
