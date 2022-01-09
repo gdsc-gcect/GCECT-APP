@@ -12,6 +12,10 @@ class MainActivityViewModel: ViewModel() {
     private val navSubItemList:ArrayList<NavSubItem?> = ArrayList()
     lateinit var subSubList:List<NavSubSubItem?>
 
+    private  var _examScheduleYear = -1
+    val examScheduleYear
+    get() = _examScheduleYear
+
     init{
         addHomeToMainList()
          addAboutUsToMainList()
@@ -133,6 +137,11 @@ class MainActivityViewModel: ViewModel() {
     }
 
     private fun addExaminationToMainList(){
+        subSubList = setSubSubItemToList(
+            NavSubSubItem("2021-2022"),
+            NavSubSubItem("2020-2021"),
+            NavSubSubItem("2019-2020"))
+        setSubItemToList(NavSubItem("Semester Examination Schedule",subSubList))
         setSubItemToList(NavSubItem("Question Paper Download",setNullToSubSubItemList()))
         subSubList = setSubSubItemToList(
             NavSubSubItem("UG Batch 2016-20, 2017-21 & PG Batch  2018-20, 2019-21"),
@@ -185,5 +194,9 @@ class MainActivityViewModel: ViewModel() {
     private fun addContactUsToMainList(){
         setBaseItemToList(NavBaseItem("Contact Us",R.drawable.contact_us_icon,setNullToSubItemList()))
         navSubItemList.clear()
+    }
+
+    fun setExamScheduleYear(year:Int){
+        _examScheduleYear = year
     }
 }

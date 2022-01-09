@@ -7,7 +7,7 @@ class Constants {
         const val welfareAssociationPdfUrl = "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/Student'%20Welfare%20Association.pdf?alt=media&token=7702cb77-2b10-42e2-b5b9-2b06c563dbaf"
         const val csiPdfUrl = "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/CSI%202014-2015.pdf?alt=media&token=78aefc90-1363-4968-a965-6a078539db54"
         val listOfImages = listOf<String>(
-            "http://gcect.ac.in/wp-content/uploads/2021/06/Screenshotx-2021-06-21-103724.png",
+            "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/NSS%20screen%20shots%2Fss1.png?alt=media&token=cf8cbc32-c638-4b2a-bc7d-004c02b99a42",
             "http://gcect.ac.in/wp-content/uploads/2021/06/Screenshotx-2021-06-21-103724.png",
             "http://gcect.ac.in/wp-content/uploads/2021/06/Screenshot99-2021-06-21-104207.png",
             "http://gcect.ac.in/wp-content/uploads/2021/06/Screenshots-2021-06-21-102917.png",

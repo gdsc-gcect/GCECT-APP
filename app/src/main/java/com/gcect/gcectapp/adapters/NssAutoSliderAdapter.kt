@@ -17,7 +17,7 @@ class NssAutoSliderAdapter(private val context: Context, private val imgUrlList:
     }
 
     override fun onBindViewHolder(viewHolder: Holder, position: Int) {
-        Glide.with(context).load(imgUrlList[position]).into(viewHolder.imageView)
+         Glide.with(context).load(imgUrlList[position]).into(viewHolder.imageView)
     }
 
     override fun getCount(): Int {
@@ -25,7 +25,7 @@ class NssAutoSliderAdapter(private val context: Context, private val imgUrlList:
     }
 
     inner class Holder(itemView: View) : ViewHolder(itemView) {
-        var imageView: ImageView = itemView.findViewById(R.id.slider_image_view)
+        var imageView: ImageView = itemView.findViewById(R.id.nss_slider_image_view)
 
     }
 }

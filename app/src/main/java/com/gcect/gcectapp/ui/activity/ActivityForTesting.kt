@@ -9,7 +9,6 @@ class ActivityForTesting : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_for_testing)
-        Glide.with(this).load("http://gcect.ac.in/wp-content/uploads/2021/06/Screenshozt-2021-06-21-103815.png")
-            .into(findViewById(R.id.imgChk))
+
     }
 }

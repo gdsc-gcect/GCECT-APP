@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvExamScheduleList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/exam_schedule_recycler_item" />
+        <TextView
+            android:id="@+id/txtDataFoundIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="OOPS!! No Data Found.."
+            android:textSize="25sp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+    </FrameLayout>
+</layout>

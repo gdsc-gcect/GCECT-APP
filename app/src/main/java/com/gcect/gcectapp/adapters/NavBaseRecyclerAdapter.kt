@@ -14,12 +14,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gcect.gcectapp.R
 import com.gcect.gcectapp.model.NavBaseItem
+import com.gcect.gcectapp.viewmodels.MainActivityViewModel
 
 class NavBaseRecyclerAdapter(
     private val context: Context,
     private val navController: NavController,
     private val imgHamburger: ImageView,
-    private val drawerLayout: DrawerLayout
+    private val drawerLayout: DrawerLayout,
+    private val mainViewModel: MainActivityViewModel
 ) :
     RecyclerView.Adapter<NavBaseRecyclerAdapter.NavBaseRecyclerViewHolder>() {
 
@@ -82,7 +84,7 @@ class NavBaseRecyclerAdapter(
         recyclerView.layoutManager = LinearLayoutManager(context)
         // Setting the Adapter with the recyclerview
         val adapter: NavSubRecyclerAdapter =
-            NavSubRecyclerAdapter(context, navController, imgHamburger, drawerLayout)
+            NavSubRecyclerAdapter(context, navController, imgHamburger, drawerLayout,mainViewModel)
         recyclerView.adapter = adapter
         adapter.updateList(list[pos].navSubItemList)
     }

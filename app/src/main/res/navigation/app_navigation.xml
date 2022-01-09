@@ -61,4 +61,40 @@
         android:name="com.gcect.gcectapp.ui.fragments.PlacementOverViewFragment"
         android:label="PlacementOverViewFragment"
         tools:layout="@layout/static_text_fragments_with_yellow_background"/>
+    <fragment
+        android:id="@+id/examScheduleFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.ExamScheduleFragment"
+        android:label="ExamScheduleFragment"
+        tools:layout="@layout/examination_schedule_page">
+        <action
+            android:id="@+id/action_examScheduleFragment_to_pdfViewerFragment"
+            app:destination="@id/pdfViewerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/evenSemScheduleFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.EvenSemScheduleFragment"
+        android:label="EvenSemScheduleFragment"
+        tools:layout="@layout/examination_schedule_list_page">
+        <action
+            android:id="@+id/action_evenSemScheduleFragment_to_pdfViewerFragment"
+            app:destination="@id/pdfViewerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/oddSemScheduleFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.OddSemScheduleFragment"
+        android:label="OddSemScheduleFragment"
+        tools:layout="@layout/examination_schedule_list_page">
+        <action
+            android:id="@+id/action_oddSemScheduleFragment_to_pdfViewerFragment"
+            app:destination="@id/pdfViewerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pdfViewerFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.PdfViewerFragment"
+        android:label="PdfViewerFragment"
+        tools:layout="@layout/pdf_viewer_with_download">
+        <action
+            android:id="@+id/action_pdfViewerFragment_to_examScheduleFragment"
+            app:destination="@id/examScheduleFragment" />
+    </fragment>
 </navigation>

@@ -12,11 +12,13 @@ import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import com.gcect.gcectapp.R
 import com.gcect.gcectapp.model.NavSubSubItem
+import com.gcect.gcectapp.viewmodels.MainActivityViewModel
 
 class NavSubSubRecyclerAdapter(
     private val navController: NavController,
     private val imgHamburger: ImageView,
-    private val drawerLayout: DrawerLayout
+    private val drawerLayout: DrawerLayout,
+    private val mainViewModel: MainActivityViewModel
 ) : RecyclerView.Adapter<NavSubSubRecyclerAdapter.NavSubSubRecyclerViewHolder>() {
 
     private val list = ArrayList<NavSubSubItem?>()
@@ -37,11 +39,26 @@ class NavSubSubRecyclerAdapter(
                 /**
                  * Handling the SubSubItemList item clicks
                  */
-                when(list[position]!!.title){
-                  "Department of Ceramic Technology" -> {
-                      setBlueHamburgerIcon()
-                      navigate(R.id.departmentCTFragment)
-                  }
+                when (list[position]!!.title) {
+                    "Department of Ceramic Technology" -> {
+                        setBlueHamburgerIcon()
+                        navigate(R.id.departmentCTFragment)
+                    }
+                    "2021-2022" -> {
+                        setBlueHamburgerIcon()
+                        mainViewModel.setExamScheduleYear(22)
+                        navigate(R.id.examScheduleFragment)
+                    }
+                    "2020-2021" -> {
+                        setBlueHamburgerIcon()
+                        mainViewModel.setExamScheduleYear(21)
+                        navigate(R.id.examScheduleFragment)
+                    }
+                    "2019-2020" -> {
+                        setBlueHamburgerIcon()
+                        mainViewModel.setExamScheduleYear(20)
+                        navigate(R.id.examScheduleFragment)
+                    }
                 }
             }
         }
@@ -75,7 +92,7 @@ class NavSubSubRecyclerAdapter(
     /**
      * For setting the white hamburger icon and closing the drawer
      */
-    private fun setWhiteHamburgerIcon(){
+    private fun setWhiteHamburgerIcon() {
         imgHamburger.setImageResource(R.drawable.hamburger_icon_white)
         drawerLayout.closeDrawer(GravityCompat.START)
     }
@@ -83,7 +100,7 @@ class NavSubSubRecyclerAdapter(
     /**
      * For setting the blue hamburger icon and closing the drawer
      */
-    private fun setBlueHamburgerIcon(){
+    private fun setBlueHamburgerIcon() {
         imgHamburger.setImageResource(R.drawable.hamburger_icon_blue)
         drawerLayout.closeDrawer(GravityCompat.START)
     }

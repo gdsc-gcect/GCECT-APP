@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         recyclerview.layoutManager = LinearLayoutManager(this)
         // This will pass the ArrayList to our Adapter
         val adapter =
-            NavBaseRecyclerAdapter(this, navController, binding.imgHamburger, binding.drawerLayout)
+            NavBaseRecyclerAdapter(this, navController, binding.imgHamburger, binding.drawerLayout,viewModel)
         adapter.updateList(viewModel.mainList)
         // Setting the Adapter with the recyclerview
         recyclerview.adapter = adapter

@@ -14,12 +14,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gcect.gcectapp.R
 import com.gcect.gcectapp.model.NavSubItem
+import com.gcect.gcectapp.viewmodels.MainActivityViewModel
 
 class NavSubRecyclerAdapter(
     private val context: Context,
     private val navController: NavController,
     private val imgHamburger:ImageView,
-    private val drawerLayout: DrawerLayout
+    private val drawerLayout: DrawerLayout,
+    private val mainViewModel: MainActivityViewModel
 ) : RecyclerView.Adapter<NavSubRecyclerAdapter.NavSubRecyclerViewHolder>() {
     private val list = ArrayList<NavSubItem?>()
 
@@ -111,7 +113,7 @@ class NavSubRecyclerAdapter(
         // Setting the layout manager
         recyclerView.layoutManager = LinearLayoutManager(context)
         // This will pass the ArrayList to our Adapter
-        val adapter = NavSubSubRecyclerAdapter(navController,imgHamburger, drawerLayout)
+        val adapter = NavSubSubRecyclerAdapter(navController,imgHamburger, drawerLayout,mainViewModel)
         // Setting the Adapter with the recyclerview
         adapter.updateList(list[position]!!.navSubSubItemList)
         recyclerView.adapter = adapter
