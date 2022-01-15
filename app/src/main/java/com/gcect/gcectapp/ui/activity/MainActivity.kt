@@ -9,14 +9,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.downloader.PRDownloader
 import com.gcect.gcectapp.R
 import com.gcect.gcectapp.adapters.NavBaseRecyclerAdapter
 import com.gcect.gcectapp.databinding.ActivityMainBinding
-import com.gcect.gcectapp.viewmodels.MainActivityViewModel
-import com.gcect.gcectapp.viewmodels.MainActivityViewModelFactory
 import com.gcect.gcectapp.adapters.HomeAutoSliderAdapter
-import com.gcect.gcectapp.viewmodels.PdfViewerViewModel
-import com.gcect.gcectapp.viewmodels.PdfViewerViewModelFactory
+import com.gcect.gcectapp.viewmodels.*
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
@@ -26,22 +24,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var viewModel: MainActivityViewModel
     private lateinit var pdfLoaderViewModel: PdfViewerViewModel
     private lateinit var binding: ActivityMainBinding
-
-    //auto img slider
-    lateinit var sliderView: SliderView
-    var images = intArrayOf(
-        R.drawable.sliderimage,
-        R.drawable.sliderimage2,
-        R.drawable.sliderimage3
-//        android.R.drawable.four,
-//        android.R.drawable.five,
-//        android.R.drawable.six
-    )
+    val noteViewModel by lazy {
+        ViewModelProvider(
+            this,
+            ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+        ).get(NoteViewModel::class.java)
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        PRDownloader.initialize(applicationContext)
         viewModel = ViewModelProvider(
             this,
             MainActivityViewModelFactory()
@@ -71,15 +65,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.imgHamburger.setOnClickListener(this)
         binding.imgClose.setOnClickListener(this)
 
-        //auto image slider
-        sliderView = findViewById(R.id.image_slider)
-
-        val sliderAdapter = HomeAutoSliderAdapter(images)
-
-        sliderView.setSliderAdapter(sliderAdapter)
-        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM)
-        sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION)
-        sliderView.startAutoCycle()
 
 
     }

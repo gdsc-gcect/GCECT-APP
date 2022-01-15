@@ -26,6 +26,7 @@ class MainActivityViewModel: ViewModel() {
         addTrainingPlacementToMainList()
         addCampusLifeToMainList()
         addETutorialToMainList()
+        addTakeNoteToMainList()
         addContactUsToMainList()
     }
 
@@ -191,6 +192,10 @@ class MainActivityViewModel: ViewModel() {
         navSubItemList.clear()
     }
 
+    private fun addTakeNoteToMainList(){
+        setBaseItemToList(NavBaseItem("Take Note",R.drawable.note_icon,setNullToSubItemList()))
+        navSubItemList.clear()
+    }
     private fun addContactUsToMainList(){
         setBaseItemToList(NavBaseItem("Contact Us",R.drawable.contact_us_icon,setNullToSubItemList()))
         navSubItemList.clear()

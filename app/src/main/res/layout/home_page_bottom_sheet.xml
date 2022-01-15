@@ -7,10 +7,15 @@
     android:layout_height="450dp"
     android:orientation="vertical"
     app:behavior_hideable="false"
-    app:behavior_peekHeight="42dp"
+    app:behavior_peekHeight="52dp"
     android:background="@drawable/home_page_bottom_sheet_background"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
-
+<View
+    android:layout_width="80dp"
+    android:layout_height="3dp"
+    android:background="@color/white"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="5dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

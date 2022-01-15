@@ -63,6 +63,10 @@ class NavBaseRecyclerAdapter(
                         setWhiteHamburgerIcon()
                         navigate(R.id.contactUsFragment)
                     }
+                    "Take Note" -> {
+                        setWhiteHamburgerIcon()
+                        navigate(R.id.noteShowFragment)
+                    }
                 }
             }
         }

@@ -10,6 +10,9 @@
         android:name="com.gcect.gcectapp.ui.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_pdfViewerFragment"
+            app:destination="@id/pdfViewerFragment" />
     </fragment>
     <fragment
         android:id="@+id/contactUsFragment"
@@ -102,4 +105,18 @@
         android:name="com.gcect.gcectapp.ui.fragments.PdfViewerFragment"
         android:label="PdfViewerFragment"
         tools:layout="@layout/pdf_viewer_with_download"/>
+    <fragment
+        android:id="@+id/noteShowFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.NoteShowFragment"
+        android:label="NoteShowFragment"
+        tools:layout="@layout/fragment_note_show">
+        <action
+            android:id="@+id/action_noteShowFragment_to_noteAddFragment"
+            app:destination="@id/noteAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteAddFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.NoteAddFragment"
+        android:label="NoteAddFragment"
+        tools:layout="@layout/fragment_note_add"/>
 </navigation>

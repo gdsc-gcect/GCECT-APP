@@ -24,7 +24,8 @@ class DownloadViewAdapter(
     private val viewModel22: SemScheduleViewModel22,
     private val viewModel21: SemScheduleViewModel21,
     private val viewModel20: SemScheduleViewModel20,
-    private val mainViewModel: MainActivityViewModel
+    private val mainViewModel: MainActivityViewModel,
+    private val listener:OnDownloadBtnClickListener
 ) : RecyclerView.Adapter<DownloadViewAdapter.DownloadViewViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DownloadViewViewHolder {
@@ -46,6 +47,9 @@ class DownloadViewAdapter(
                 viewModel!!.setListPosAndType(position,isEven)
                 viewModel.setNavFragId(navFragId)
         }
+        holder.llDownload.setOnClickListener {
+            listener.onDownloadBtnPressed(list[position].pdfUrl)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -60,4 +64,8 @@ class DownloadViewAdapter(
         val llView: LinearLayout = itemView.findViewById(R.id.llView)
     }
 
+}
+
+interface OnDownloadBtnClickListener{
+    fun onDownloadBtnPressed(url:String)
 }

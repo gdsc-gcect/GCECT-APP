@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llBottomSheetItems"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?attr/selectableItemBackground"
@@ -14,6 +15,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/download_icon" />
 <TextView
+    android:id="@+id/txtBottomSheetNoticeTitle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="HYBRID ROUTINE FOR CT 3RD, 5TH and 7TH SEMESTER, 2021 CLICK HERE"
