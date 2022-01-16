@@ -6,12 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
 import com.gcect.gcectapp.R
 import com.gcect.gcectapp.adapters.ExaminationScheduleViewPagerAdapter
 import com.gcect.gcectapp.databinding.ExaminationSchedulePageBinding
+import com.gcect.gcectapp.ui.activity.MainActivity
 import com.google.android.material.tabs.TabLayoutMediator
 
 class ExamScheduleFragment : Fragment() {
@@ -40,5 +42,41 @@ class ExamScheduleFragment : Fragment() {
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = semesterTypeArray[position]
         }.attach()
+
+        onBackPressed()
+    }
+
+    /**
+     * handling back press from fragments
+     */
+    private fun onBackPressed() {
+        requireActivity()
+            .onBackPressedDispatcher
+            .addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    // Do custom work here
+                    navigate(
+                        R.id.homeFragment
+                    )
+                    setWhiteHamburgerIcon()
+                }
+            }
+            )
+    }
+
+    /**
+     * For handling navigation
+     */
+    private fun navigate(navFragId: Int) {
+        val id = findNavController().currentDestination?.id
+        findNavController().popBackStack(id!!, true)
+        findNavController().navigate(navFragId)
+    }
+
+    /**
+     * For setting the white hamburger icon
+     */
+    private fun setWhiteHamburgerIcon() {
+        MainActivity.iconHamburger!!.setImageResource(R.drawable.hamburger_icon_white)
     }
 }

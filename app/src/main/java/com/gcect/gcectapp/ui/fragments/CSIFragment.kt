@@ -5,10 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
+import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.fragment.findNavController
 import com.gcect.gcectapp.R
 import com.gcect.gcectapp.databinding.PdfViewerWithoutDownloadBinding
+import com.gcect.gcectapp.ui.activity.MainActivity
 import com.gcect.gcectapp.utils.Constants
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -21,7 +27,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
-class CSIFragment : Fragment() {
+class CSIFragment() : Fragment() {
     private lateinit var binding: PdfViewerWithoutDownloadBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,6 +45,7 @@ class CSIFragment : Fragment() {
         CoroutineScope(Dispatchers.Main).launch {
             retrivePDFFromUrl(Constants.csiPdfUrl)
         }
+        onBackPressed()
     }
 
     /**
@@ -90,5 +97,39 @@ class CSIFragment : Fragment() {
                 ).show()
             }
             .load()
+    }
+
+    /**
+     * handling back press from fragments
+     */
+    private fun onBackPressed() {
+        requireActivity()
+            .onBackPressedDispatcher
+            .addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    // Do custom work here
+                    navigate(
+                        R.id.homeFragment
+                    )
+                    setWhiteHamburgerIcon()
+                }
+            }
+            )
+    }
+
+    /**
+     * For handling navigation
+     */
+    private fun navigate(navFragId: Int) {
+        val id = findNavController().currentDestination?.id
+        findNavController().popBackStack(id!!, true)
+        findNavController().navigate(navFragId)
+    }
+
+    /**
+     * For setting the white hamburger icon
+     */
+    private fun setWhiteHamburgerIcon() {
+        MainActivity.iconHamburger!!.setImageResource(R.drawable.hamburger_icon_white)
     }
 }
