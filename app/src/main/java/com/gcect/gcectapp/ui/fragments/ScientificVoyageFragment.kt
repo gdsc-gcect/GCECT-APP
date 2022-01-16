@@ -12,6 +12,9 @@ import com.gcect.gcectapp.databinding.FragmentScientificVoyageBinding
 import com.gcect.gcectapp.viewmodels.ScientificVoyageViewModel
 import android.content.Intent
 import android.net.Uri
+import androidx.activity.OnBackPressedCallback
+import androidx.navigation.fragment.findNavController
+import com.gcect.gcectapp.ui.activity.MainActivity
 
 
 class ScientificVoyageFragment : Fragment() {
@@ -29,11 +32,46 @@ class ScientificVoyageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.svFragment = this
+        onBackPressed()
     }
 
     fun openScientificVoyageWebsite(){
         val i = Intent(Intent.ACTION_VIEW)
         i.data = Uri.parse(viewModel.scientificVoyageUrl)
         startActivity(i)
+    }
+
+    /**
+     * handling back press from fragments
+     */
+    private fun onBackPressed() {
+        requireActivity()
+            .onBackPressedDispatcher
+            .addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    // Do custom work here
+                    navigate(
+                        R.id.homeFragment
+                    )
+                    setWhiteHamburgerIcon()
+                }
+            }
+            )
+    }
+
+    /**
+     * For handling navigation
+     */
+    private fun navigate(navFragId: Int) {
+        val id = findNavController().currentDestination?.id
+        findNavController().popBackStack(id!!, true)
+        findNavController().navigate(navFragId)
+    }
+
+    /**
+     * For setting the white hamburger icon
+     */
+    private fun setWhiteHamburgerIcon() {
+        MainActivity.iconHamburger!!.setImageResource(R.drawable.hamburger_icon_white)
     }
 }

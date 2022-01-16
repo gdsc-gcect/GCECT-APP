@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.gcect.gcectapp.R
 import com.gcect.gcectapp.adapters.NoteItemClickListener
 import com.gcect.gcectapp.adapters.NoteRecyclerAdapter
+import com.gcect.gcectapp.ui.activity.MainActivity
 import com.gcect.gcectapp.viewmodels.NoteViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -77,6 +78,9 @@ class NoteShowFragment : Fragment(), NoteItemClickListener {
 
     }
 
+    /**
+     * handling back press from fragments
+     */
     private fun onBackPressed() {
         requireActivity()
             .onBackPressedDispatcher
@@ -86,6 +90,7 @@ class NoteShowFragment : Fragment(), NoteItemClickListener {
                     navigate(
                         R.id.homeFragment
                     )
+                    setWhiteHamburgerIcon()
                 }
             }
             )
@@ -98,5 +103,12 @@ class NoteShowFragment : Fragment(), NoteItemClickListener {
         val id = findNavController().currentDestination?.id
         findNavController().popBackStack(id!!, true)
         findNavController().navigate(navFragId)
+    }
+
+    /**
+     * For setting the white hamburger icon
+     */
+    private fun setWhiteHamburgerIcon() {
+        MainActivity.iconHamburger!!.setImageResource(R.drawable.hamburger_icon_white)
     }
 }

@@ -2,6 +2,7 @@ package com.gcect.gcectapp.ui.activity
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
@@ -24,6 +25,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var viewModel: MainActivityViewModel
     private lateinit var pdfLoaderViewModel: PdfViewerViewModel
     private lateinit var binding: ActivityMainBinding
+    companion object {
+        var iconHamburger: ImageView? = null
+    }
     val noteViewModel by lazy {
         ViewModelProvider(
             this,
@@ -46,6 +50,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             PdfViewerViewModelFactory()
         ).get(PdfViewerViewModel::class.java)
 
+        iconHamburger = binding.imgHamburger
         // finding the navController
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
