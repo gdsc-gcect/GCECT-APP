@@ -4,7 +4,7 @@
     <string name="close">Close</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="gate_rank">Gate Rank: %d</string>
+    <string name="gate_rank">%s: %d</string>
     <string name="research_dev_p1">The Institute has highly qualified faculty members where 35% of them are Doctorate Degree Holders.
         The rest are Post Graduate Degree holders out of which most of them are pursuing their Ph.D degrees.
         Over the last one year, the college has produced 5 Ph.Ds from both engineering and science departments.\n\n

@@ -2,6 +2,7 @@ package com.gcect.gcectapp.viewmodels
 
 
 import androidx.lifecycle.ViewModel
+import com.gcect.gcectapp.model.GateRankerDetails
 import com.gcect.gcectapp.model.PdfInfo
 import com.gcect.gcectapp.utils.Constants
 
@@ -18,12 +19,16 @@ class HomeFragmentViewModel: ViewModel() {
     private val _autoSliderImgList = ArrayList<String>()
     val autoSliderImgList:List<String> = _autoSliderImgList
 
+    private val _gateRankerList = ArrayList<GateRankerDetails>()
+    val gateRankerList:List<GateRankerDetails> = _gateRankerList
+
     val graduateDayVideoUrl = "https://www.youtube.com/watch?v=CnDo3MDO6jM&t=456s"
     init {
         addNoticeItemToList()
         addBottomSheetItemToList()
         addRedNoticeItemToList()
         addAutoSliderImagesToList()
+        addGateRankerDetailsToList()
     }
 
     private fun addNoticeItemToList(){
@@ -85,5 +90,20 @@ class HomeFragmentViewModel: ViewModel() {
         _autoSliderImgList.add("https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/images%2Fhome%20page%20auto%20slider%20images%2Fimg5.jpeg?alt=media&token=9b9a4f13-913a-4f09-a976-61a02e468f0d")
         _autoSliderImgList.add("https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/images%2Fhome%20page%20auto%20slider%20images%2Fimg6.jpg?alt=media&token=5317af56-c585-4078-aef9-5293353df52b")
         _autoSliderImgList.add("https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/images%2Fhome%20page%20auto%20slider%20images%2Fimg7.jpg?alt=media&token=275eadef-fe8d-4fda-b77d-3798bb66b611")
+    }
+
+    private fun addGateRankerDetailsToList(){
+        _gateRankerList.add(
+            GateRankerDetails("Ritesh Kumar Jha",525,
+            "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/images%2Fgate%20rankers%2FRiteshKumarJha.jpg?alt=media&token=6320657d-257b-4ed5-9868-32f41b2e027d")
+        )
+        _gateRankerList.add(GateRankerDetails("Debmalya Sen",539,
+        "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/images%2Fgate%20rankers%2FDevmalyaSen.jpg?alt=media&token=b097a52d-0500-4904-a9dd-349103f41259"))
+        _gateRankerList.add(GateRankerDetails("Zeba Iqbal",658,
+        "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/images%2Fgate%20rankers%2FZebaIqbal.jpg?alt=media&token=42b1478e-54cc-4f3d-8ad4-aa8c1b2b6cad"))
+        _gateRankerList.add(GateRankerDetails("Sneha Tiwari",1855,
+        "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/images%2Fgate%20rankers%2FSnehaTiwari.jpg?alt=media&token=39586128-0d6d-41f4-9624-0f803eec27de"))
+        _gateRankerList.add(GateRankerDetails("Sweta Sarkar",8535,
+        "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/images%2Fgate%20rankers%2FSwetaSarkar.jpg?alt=media&token=fb9fabf3-347e-489e-94b0-57e3955a5fb4"))
     }
 }

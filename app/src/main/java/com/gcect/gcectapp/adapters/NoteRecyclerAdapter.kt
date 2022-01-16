@@ -32,7 +32,7 @@ class NoteRecyclerAdapter(private val listener: NoteItemClickListener):RecyclerV
             listener.onEditBtnPressed()
         }
         holder.imgDelete.setOnClickListener {
-            listener.onDeleteBtnPressed(position.toLong()+1)
+            listener.onDeleteBtnPressed(list[position].id)
         }
     }
 

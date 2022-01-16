@@ -104,7 +104,7 @@ class HomeFragment : Fragment(), OnHomeNoticeItemClickListener, OnBottomSheetIte
         /**
          * for gate ranker list showing
          */
-        val gateRankerAdapter = HomeGateRankerRecyclerAdapter()
+        val gateRankerAdapter = HomeGateRankerRecyclerAdapter(requireContext(),viewModel.gateRankerList)
         binding.rvGateRanker.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.rvGateRanker.adapter = gateRankerAdapter

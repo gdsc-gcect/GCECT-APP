@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -20,7 +21,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class NoteShowFragment : Fragment(), NoteItemClickListener {
     lateinit var rvNoteList: RecyclerView
     lateinit var btnAddNote: FloatingActionButton
-    val noteViewModel by lazy {
+    lateinit var imgNoData: ImageView
+    private val noteViewModel by lazy {
         ViewModelProvider(
             requireActivity(),
             ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
@@ -40,6 +42,7 @@ class NoteShowFragment : Fragment(), NoteItemClickListener {
         val adapter = NoteRecyclerAdapter(this)
         rvNoteList = view.findViewById<RecyclerView>(R.id.rvNoteList)
         btnAddNote = view.findViewById<FloatingActionButton>(R.id.btnAddNote)
+        imgNoData = view.findViewById(R.id.imgNoDataFound)
         // initialize staggered grid layout manager
         StaggeredGridLayoutManager(
             2, // span count
@@ -52,6 +55,11 @@ class NoteShowFragment : Fragment(), NoteItemClickListener {
 
         noteViewModel.allNotes.observe(viewLifecycleOwner, Observer { list ->
             adapter.updateList(list)
+            if (list.isEmpty()) {
+                imgNoData.visibility = View.VISIBLE
+            } else {
+                imgNoData.visibility = View.GONE
+            }
         })
 
         btnAddNote.setOnClickListener {

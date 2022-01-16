@@ -1,12 +1,18 @@
 package com.gcect.gcectapp.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.gcect.gcectapp.R
+import com.gcect.gcectapp.model.GateRankerDetails
+import com.mikhaellopez.circularimageview.CircularImageView
 
-class HomeGateRankerRecyclerAdapter:RecyclerView.Adapter<HomeGateRankerRecyclerAdapter.HomeGateRankerRecyclerViewHolder>() {
+class HomeGateRankerRecyclerAdapter(private val context: Context, private val list:List<GateRankerDetails>)
+    :RecyclerView.Adapter<HomeGateRankerRecyclerAdapter.HomeGateRankerRecyclerViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -18,15 +24,17 @@ class HomeGateRankerRecyclerAdapter:RecyclerView.Adapter<HomeGateRankerRecyclerA
     }
 
     override fun onBindViewHolder(holder: HomeGateRankerRecyclerViewHolder, position: Int) {
-
+          val rankerDetail = context.getString(R.string.gate_rank,list[position].name,list[position].gateRank)
+        holder.txtGateRanker.text = rankerDetail
+        Glide.with(context).load(list[position].imgUrl).into(holder.imgGateRanker)
     }
 
     override fun getItemCount(): Int {
-        return 10
+        return list.size
     }
 
     inner class HomeGateRankerRecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-
-
+         val imgGateRanker:CircularImageView = itemView.findViewById(R.id.imgGateRanker)
+         val txtGateRanker: TextView = itemView.findViewById(R.id.txtGateRanker)
     }
 }
