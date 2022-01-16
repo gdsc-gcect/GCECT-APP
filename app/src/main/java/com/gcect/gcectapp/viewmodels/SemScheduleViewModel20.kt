@@ -30,28 +30,13 @@ class SemScheduleViewModel20:ViewModel(), SemScheduleViewModelCallBack {
     }
     private fun addDataToEvenSemList(){
         _evenSemList.add(
-            DownloadViewListModel("Online Examination Schedule for Semester End Examination",
-            "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/pdfs%2FExam%20Schedule%20Pdfs%2F2021%20-%202022%2Fodd1.pdf?alt=media&token=15622a54-4811-4585-be49-b931ba441112")
+            DownloadViewListModel("Online Examination Schedule for Semester End (Even Semester) Examination",
+            "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/pdfs%2FExam%20Schedule%20Pdfs%2F2019-20%2Feven1.pdf?alt=media&token=c8fff8e4-68a2-4fb6-a847-35579045ec5e")
         )
 
         _evenSemList.add(
-            DownloadViewListModel("Online Examination Schedule for Semester End Examination",
-            "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/Student'%20Welfare%20Association.pdf?alt=media&token=7702cb77-2b10-42e2-b5b9-2b06c563dbaf")
-        )
-
-        _evenSemList.add(
-            DownloadViewListModel("Online Examination Schedule for Semester End Examination",
-            "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/pdfs%2FExam%20Schedule%20Pdfs%2F2021%20-%202022%2Fodd1.pdf?alt=media&token=15622a54-4811-4585-be49-b931ba441112")
-        )
-
-        _evenSemList.add(
-            DownloadViewListModel("Online Examination Schedule for Semester End Examination",
-            "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/pdfs%2FExam%20Schedule%20Pdfs%2F2021%20-%202022%2Fodd1.pdf?alt=media&token=15622a54-4811-4585-be49-b931ba441112")
-        )
-
-        _evenSemList.add(
-            DownloadViewListModel("Online Examination Schedule for Semester End Examination",
-            "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/pdfs%2FExam%20Schedule%20Pdfs%2F2021%20-%202022%2Fodd1.pdf?alt=media&token=15622a54-4811-4585-be49-b931ba441112")
+            DownloadViewListModel("Online Examination Schedule for Final Semester (B.Tech 8th Sem) Examination",
+            "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/pdfs%2FExam%20Schedule%20Pdfs%2F2019-20%2Feven2.pdf?alt=media&token=55d79f9f-cc46-409c-88b1-06db11399b3e")
         )
     }
 
