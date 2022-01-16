@@ -82,4 +82,4 @@ Some features that are included in the app are:
   - [Dexter](https://github.com/Karumi/Dexter) - Dexter is an Android library that simplifies the process of requesting permissions at runtime.
   
 ## Application Link & Future Scope :
-The app is currently in the modification & testing phase with SSITM institute with a limited no. of users, You can access the app : [Download](https://github.com/Ayan-thecodeking/myFirstChatApp/releases/tag/v2.3.4).
+The app is currently in the modification & testing phase; we are willing to work on a lot of functionalities which are not still integrated in the app, You can access the app : [Download](https://drive.google.com/file/d/1dYNF4PMQSnzelyyqQsvGvo4NispntQu6/view?usp=sharing).
