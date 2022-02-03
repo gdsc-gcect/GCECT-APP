@@ -1,7 +1,7 @@
 # GCECT-APP
 An native android application of Government College of Engineering and Ceramic Technology
 
-## Problem Statement:
+## The Problem we are trying to resolve:
 
 Our university website was not properly optimised and responsive for mobile devices which posed difficulties for students to navigate and to utilise all the features the website has to offer. Also some times students are missing important notices as they don't get any notification. Also to view a simple notice all students need to download the notice from the website. Our university website Ui also not so user friendly and informative for new comers also there has not any discussion or helping. Altogather we can achieve a lot of functionality using an user friendly mobile application. Therefore we, team GDSC-GCECT come with an idea of an user friendly android app named "GCECT APP".
 
