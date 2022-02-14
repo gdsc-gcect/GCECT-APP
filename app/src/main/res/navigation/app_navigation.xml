@@ -119,4 +119,13 @@
         android:name="com.gcect.gcectapp.ui.fragments.NoteAddFragment"
         android:label="NoteAddFragment"
         tools:layout="@layout/fragment_note_add"/>
+    <fragment
+        android:id="@+id/historyViewFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.HistoryViewFragment"
+        android:label="HistoryViewFragment"
+        tools:layout="@layout/static_about_us_fragment"/>
+    <fragment android:id="@+id/theInstituteFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.TheInstituteViewFragment"
+        android:label="TheInstituteViewFragment"
+        tools:layout="@layout/static_about_us_fragment"/>
 </navigation>
