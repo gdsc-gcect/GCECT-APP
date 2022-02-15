@@ -1,7 +1,3 @@
- <p align="center">
- <img src="https://github.com/ByteMonk-GCECT/GCECT-APP/blob/develop/Assets/gcect%20app%20banner.jpg" height= 500 width = 889 />
-</p>
-
 # GCECT-APP
 An native android application of Government College of Engineering and Ceramic Technology
 
