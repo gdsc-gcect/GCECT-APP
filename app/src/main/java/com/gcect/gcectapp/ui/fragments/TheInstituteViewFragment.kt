@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.gcect.gcectapp.R
 import com.gcect.gcectapp.databinding.StaticAboutUsFragmentBinding
@@ -26,8 +28,30 @@ class TheInstituteViewFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.pageTitle = "About Us"
-        binding.pageDesc = getString(R.string.history_page)
+        binding.pageDesc = getString(R.string.the_institute)
         val instituteImg = binding.gcectAboutUsImage
         Glide.with(requireContext()).load(instituteImgUrl).into(instituteImg)
+        onBackPressed()
+    }
+    private fun onBackPressed() {
+        requireActivity()
+            .onBackPressedDispatcher
+            .addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    // Do custom work here
+                    navigate(
+                        R.id.homeFragment
+                    )
+                }
+            }
+            )
+    }
+    /**
+     * For handling navigation
+     */
+    private fun navigate(navFragId: Int) {
+        val id = findNavController().currentDestination?.id
+        findNavController().popBackStack(id!!, true)
+        findNavController().navigate(navFragId)
     }
 }
