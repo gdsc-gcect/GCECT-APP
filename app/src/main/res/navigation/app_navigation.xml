@@ -123,9 +123,9 @@
         android:id="@+id/historyViewFragment"
         android:name="com.gcect.gcectapp.ui.fragments.HistoryViewFragment"
         android:label="HistoryViewFragment"
-        tools:layout="@layout/static_about_us_fragment"/>
+        tools:layout="@layout/history_view_fragment"/>
     <fragment android:id="@+id/theInstituteFragment"
         android:name="com.gcect.gcectapp.ui.fragments.TheInstituteViewFragment"
         android:label="TheInstituteViewFragment"
-        tools:layout="@layout/static_about_us_fragment"/>
+        tools:layout="@layout/the_institute_view_fragment"/>
 </navigation>
