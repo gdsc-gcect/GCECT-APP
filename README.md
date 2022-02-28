@@ -1,5 +1,5 @@
  <p align="center">
- <img src="https://github.com/ByteMonk-GCECT/GCECT-APP/blob/develop/Assets/gcect%20app%20banner.jpg" height= 500 width = 889 />
+ <img src="https://github.com/ByteMonk-GCECT/GCECT-APP/blob/develop/Assets/github_banner.jpeg" height= 500 width = 889 />
 </p>
 
 # GCECT-APP
