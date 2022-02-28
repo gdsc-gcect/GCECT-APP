@@ -1,5 +1,5 @@
  <p align="center">
- <img src="https://github.com/ByteMonk-GCECT/GCECT-APP/blob/develop/Assets/gcect%20app%20banner.jpg" height= 500 width = 889 />
+ <img src="https://github.com/ByteMonk-GCECT/GCECT-APP/blob/develop/Assets/github_banner.jpeg" height= 500 width = 889 />
 </p>
 
 # GCECT-APP
@@ -88,6 +88,8 @@ For the time being we are working with static datas of the website. After comple
     <td align="center"><a href="https://github.com/sitamadex11"><img alt="" src="https://avatars.githubusercontent.com/sitamadex11" width="200px;"><br><sub><b> Sitam Sardar </b></sub></a><br></td> </a></td>
         <td align="center"><a href="https://github.com/Kunal-Kayal"><img alt="" src="https://avatars.githubusercontent.com/Kunal-Kayal" width="200px;"><br><sub><b> Kunal Kayal </b></sub></a><br></td> </a></td>
             <td align="center"><a href="https://github.com/chayan-dev"><img alt="" src="https://avatars.githubusercontent.com/chayan-dev" width="200px;"><br><sub><b> Chayan Das </b></sub></a><br></td> </a></td>
+	    <td align="center"><a href="https://github.com/cdhiraj40"><img alt="" src="https://avatars.githubusercontent.com/cdhiraj40" width="200px;"><br><sub><b> Dhiraj Chauhan </b></sub></a><br></td> </a></td>
+	    <td align="center"><a href="https://github.com/hellosagar"><img alt="" src="https://avatars.githubusercontent.com/hellosagar" width="200px;"><br><sub><b> Sagar Khurana </b></sub></a><br></td> </a></td>
 </tr>
 </tbody>
 </table>
