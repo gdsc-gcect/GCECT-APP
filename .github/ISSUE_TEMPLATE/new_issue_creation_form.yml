@@ -1,7 +1,7 @@
 name: New Issue
 description: For a new issue creation
 title: "Type your issue title"
-labels: ["help wanted", "GSSoC-22"]
+labels: ["help wanted", "GSSoC22"]
 body:
   - type: markdown
     attributes:
