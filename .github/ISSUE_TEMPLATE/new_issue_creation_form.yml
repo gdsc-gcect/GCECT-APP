@@ -1,0 +1,65 @@
+name: New Issue
+description: For a new issue creation
+title: "Type your issue title"
+labels: ["help wanted", "GSSoC-22"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to create a new issue!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: dropdown
+    id: isGssoc
+    attributes:
+      label: GSSoC-22
+      description: Are you making the issue for GSSoC-22?
+      options:
+        - "yes"
+        - "no"
+    validations:
+      required: true
+  - type: dropdown
+    id: issueType
+    attributes:
+      label: Type of Issue
+      description: for what you are creating the issue?
+      options:
+        - Bug
+        - New Feature
+        - UI Related
+        - Others
+    validations:
+      required: true
+  - type: textarea
+    id: issuedescription
+    attributes:
+      label: Description
+      description: Also tell us, the detail of your issue..
+      placeholder: Tell us why you are creating the issue!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: bugLog
+    attributes:
+      label: Error Logs
+      description: If the issue for bug please share the log.
+      render: shell
+      placeholder: paste your log here
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
