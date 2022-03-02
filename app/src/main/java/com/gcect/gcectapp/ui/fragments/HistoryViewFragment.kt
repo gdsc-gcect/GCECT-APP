@@ -1,12 +1,18 @@
 package com.gcect.gcectapp.ui.fragments
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
 import com.gcect.gcectapp.R
 import com.gcect.gcectapp.databinding.StaticAboutUsFragmentBinding
 
@@ -24,7 +30,32 @@ class HistoryViewFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.pageDesc = getString(R.string.history_page)
         binding.pageTitle = "HISTORY"
+        binding.pbImg.visibility = View.VISIBLE
         val historyImg = binding.gcectAboutUsImage
-        Glide.with(requireContext()).load(historyImgUrl).into(historyImg)
+        Glide.with(requireContext()).load(historyImgUrl)
+            .listener(object: RequestListener<Drawable>{
+                override fun onLoadFailed(
+                    e: GlideException?,
+                    model: Any?,
+                    target: Target<Drawable>?,
+                    isFirstResource: Boolean
+                ): Boolean {
+                    Toast.makeText(requireContext(),"Sorry!! can't load",Toast.LENGTH_SHORT).show()
+                    return false
+                }
+
+                override fun onResourceReady(
+                    resource: Drawable?,
+                    model: Any?,
+                    target: Target<Drawable>?,
+                    dataSource: DataSource?,
+                    isFirstResource: Boolean
+                ): Boolean {
+                    binding.pbImg.visibility = View.GONE
+                    return false
+                }
+
+            })
+            .into(historyImg)
     }
 }
