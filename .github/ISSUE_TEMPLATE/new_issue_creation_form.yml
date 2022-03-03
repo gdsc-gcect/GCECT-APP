@@ -55,11 +55,9 @@ body:
       placeholder: paste your log here
     validations:
       required: false
-  - type: markdown
-    value: "## PR Instructions:"
   - type: checkboxes
     id: terms
-    attributes:
+    attributes
       label: Code of Conduct
       description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/ByteMonk-GCECT/GCECT-APP/blob/develop/Assets/Contributing.md)
       options:
