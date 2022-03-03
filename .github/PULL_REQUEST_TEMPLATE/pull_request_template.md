@@ -2,14 +2,21 @@
   - Thanks for submitting your PR to GCECT-APP! Please fill out the following as part of
   - your pull request so we can review your code more easily.
   -->
-
-## Explanation
+## Reference:
+<!-- 
+   - Refence with the relevant issue ( #issue_no) so that GitHub can auto-close the issue
+  - when this PR is merged. -->
+  
+## Explanation:
 <!--
-  - Explain what your PR does. For example if this PR fixes an existing bug, please include
-  - "Fixes #bugnum:" in the explanation so that GitHub can auto-close the issue
-  - when this PR is merged.
+  - Explain what your PR does. For example if this PR fixes an existing bug, please share how how you fixed the bug
+  - and also make sure that your code does't changing any existing functionality
   -->
 
+## ScreenShot / Video
+<!--
+  - share a ScreenShot or recorded video about your PR does. -->
+  
 ## Checklist
 <!-- Please tick the relevant boxes by putting an "x" in them. -->
 - [ ] The PR is UI related.
