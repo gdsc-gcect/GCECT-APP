@@ -16,7 +16,8 @@ assignees: ''
 ## Description:
 
 
-
+## ScreenShots / Video:
+> If you have any UI related suggestion then please share a screen shot or recorded video
 
 
 ## PR Instruction:
