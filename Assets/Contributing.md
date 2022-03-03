@@ -35,7 +35,7 @@ For more information, refer to <a href = "https://docs.github.com/en" target = "
 
  * If you do find a new issue, do not hesitate to open a new one. Make sure to describe any additions required in the message.
 
- * If you want to contribute on UI theme of the application make sure you maintain the proper color theme. For reference, you can see our [UI design in figma]( https://www.figma.com/file/6xXpKNhilvlLJ6HUpC2kkC/University-APP?node-id=0%3A1)
+ * If you want to contribute on UI theme of the application make sure you maintain the proper color theme of our college app. For reference, you can see our [UI design in figma]( https://www.figma.com/file/6xXpKNhilvlLJ6HUpC2kkC/University-APP?node-id=0%3A1)
  * If interested, do mention the issue that you want to work on it.
 
  * Kindly wait for approval from the maintainers of this project before starting to work on any issue.
