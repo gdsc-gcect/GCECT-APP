@@ -56,7 +56,7 @@ body:
     validations:
       required: false
   - type: markdown
-      value: "## PR Instructions:"
+    value: "## PR Instructions:"
   - type: markdown
     attributes:
       value: |
