@@ -1,6 +1,6 @@
 ---
 name: UI Related Issue Template
-about: For all UI suggetion or Implementation related Issues.
+about: For all UI suggetion or Implementation related Issues. Or you can use the `New Issue` Template too.
 title: UI Related
 labels: GSSoC22, help wanted, UI
 assignees: ''
