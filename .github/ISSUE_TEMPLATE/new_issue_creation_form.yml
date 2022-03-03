@@ -7,6 +7,11 @@ body:
     attributes:
       value: |
         Thanks for taking the time to create a new issue!
+  - type: markdown
+    value: "## Welcome!"
+    attributes:
+      value: |
+        Thanks for taking the time to create a new issue!
   - type: input
     id: contact
     attributes:
