@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to create a new issue!
+        ### Thanks for taking the time to create a new issue!
   - type: markdown
     attributes:
       value: |
@@ -14,7 +14,7 @@ body:
         - If you are thinking to make a pr then at first be sure to get assigned.
         - before pushing your PR please make sure to fetch upstream.
         - your pr should be pushed on the `develop` branch only.
-        - try to complete your assigned task within specified and if you need more time then please let me know. 
+        - try to complete your assigned task within specified and if you need more time then please let us know. 
              - for Level1 : max 3 days
              - for Level2 : max 5 days
              - for Level3 : max 7 day
