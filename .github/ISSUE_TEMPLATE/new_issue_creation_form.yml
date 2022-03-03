@@ -9,9 +9,13 @@ body:
         Thanks for taking the time to create a new issue!
   - type: markdown
     attributes:
-      label: welcome
       value: |
-        Thanks for taking the time to create a new issue!
+        - Issue will be assigned on a first come first serve basis.
+        - If you are thinking to make a pr then at first be sure to get assigned.
+        - before pushing your PR please make sure to fetch upstream.
+        - your pr should be pushed on the `develop` branch only.
+        - try to complete your assigned task within 3 to 5 days and if you need more time then please let me know. As the program has limited time only so please try to complete as fast as you can.
+        - With your PR try to send a screenshot or screen recording of your work
   - type: input
     id: contact
     attributes:
