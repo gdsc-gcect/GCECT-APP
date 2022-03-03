@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        when (v!!.id) {
+        when (v?.id) {
             R.id.imgHamburger -> {
                 binding.drawerLayout.openDrawer(GravityCompat.START)
             }

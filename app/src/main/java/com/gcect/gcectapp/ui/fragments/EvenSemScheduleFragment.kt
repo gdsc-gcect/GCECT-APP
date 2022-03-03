@@ -67,7 +67,7 @@ class EvenSemScheduleFragment(private val navController: NavController) : Fragme
             else -> null
         }
 
-        if(list!!.isEmpty()){
+        if(list.isNullOrEmpty()){
             binding.txtDataFoundIndicator.visibility = View.VISIBLE
             binding.rvExamScheduleList.visibility = View.GONE
         } else {

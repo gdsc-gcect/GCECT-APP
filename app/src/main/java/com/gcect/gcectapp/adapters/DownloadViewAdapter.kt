@@ -44,8 +44,10 @@ class DownloadViewAdapter(
         holder.txtTopic.text = list[position].title
         holder.llView.setOnClickListener {
                 navController.navigate(R.id.action_examScheduleFragment_to_schedulePdfViewerFragment)
-                viewModel!!.setListPosAndType(position,isEven)
-                viewModel.setNavFragId(navFragId)
+                viewModel?.let {
+                    it.setListPosAndType(position, isEven)
+                    it.setNavFragId(navFragId)
+                }
         }
         holder.llDownload.setOnClickListener {
             listener.onDownloadBtnPressed(list[position].pdfUrl)
