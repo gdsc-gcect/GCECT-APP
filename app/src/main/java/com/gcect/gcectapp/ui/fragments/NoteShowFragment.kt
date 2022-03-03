@@ -96,7 +96,7 @@ class NoteShowFragment : Fragment(), NoteItemClickListener {
      */
     private fun navigate(navFragId: Int) {
         val id = findNavController().currentDestination?.id
-        findNavController().popBackStack(id!!, true)
+        id?.let { findNavController().popBackStack(it, true) }
         findNavController().navigate(navFragId)
     }
 }
