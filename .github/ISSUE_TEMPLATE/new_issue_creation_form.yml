@@ -8,8 +8,8 @@ body:
       value: |
         Thanks for taking the time to create a new issue!
   - type: markdown
-    value: "## Welcome!"
     attributes:
+      label: "## Welcome!"
       value: |
         Thanks for taking the time to create a new issue!
   - type: input
