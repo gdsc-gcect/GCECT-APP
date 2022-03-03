@@ -55,7 +55,7 @@
                     android:layout_height="50dp"
                     android:layout_marginStart="30dp"
                     android:background="@drawable/simple_rounded_corner_background"
-                    android:src="@drawable/gcect_logo" />
+                    android:src="@drawable/round_logo" />
 
                 <TextView
                     android:id="@+id/txtGCECT"
@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:layout_toEndOf="@id/imgGcectLogo"
                     android:fontFamily="@font/roboto_bold"
                     android:text="GCECT"
@@ -72,8 +72,8 @@
 
                 <ImageView
                     android:id="@+id/imgClose"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="30dp"
@@ -91,5 +91,6 @@
                 android:layout_marginEnd="10dp"
                 tools:listitem="@layout/nav_base_recycler_item" />
         </LinearLayout>
+
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>
