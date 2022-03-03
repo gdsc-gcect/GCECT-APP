@@ -1,4 +1,4 @@
-# Contributing Guildelines
+# Contributing Guidelines
 
 ### 👍🎉 First off, welcome to the project and thanks for taking the time to contribute! 🎉👍
 <br>
@@ -7,32 +7,60 @@
 <br>
 
 ## Before Getting Started!
-Learn how to fork a repo, create an issue, make changes, create pull request.
+Learn how to fork a repo, create an issue, make changes, create a pull request.
+Please read our SETUP.md file for setting up our project in your local environment.
 
 For more information, refer to <a href = "https://docs.github.com/en" target = "_self">GitHub Documentation</a>
 
 --------
-## Contributing Process
-1. Go through 'Issues' to ensure whether the said issue has already been raised.
+### Issue Reporting
+* Report the issue and choose bug report or feature request. The template includes all the information we need to track down the issue.
+* This repository is only for issues within the BatteryAlarm Android app code. Issues in other components should be reported in their own repositories.
+* Search the existing issues first, it's likely that your issue was already reported. If your issue appears to be a bug, and hasn't been reported, open a new issue.
 
-2. If you do find a new issue, do not hesitate to open a new one. Make sure to describe any additions required in the message.
+## Contributing to Source Code
+### Branching model
+* All contributions bug fix or feature PRs target the develop branch
+* Feature releases will always be based on develop.
+* Bugfix releases will always be based on their respective feature-release-bug-fix-branches
+* Hotfixes not relevant for an upcoming feature release but the latest release can target the bug fix branch directly
 
-3. If interested, do mention in the issue that you want to work on it.
+### Android Studio formatter setup
+* Standard Android Studio
+* Line length 120 characters (Settings->Editor->Code Style->Right margin(columns): 120)
+* Auto optimize imports (Settings->Editor->Auto Import->Optimize imports on the fly)
 
-4. Kindly wait for the approval from the maintainers of this project before starting to work on any issue.
+### Contribution process
+ * Go through 'Issues' to ensure whether the said issue has already been raised.
 
-5. *Do not make changes to the main branch.* All the changes should be made to the develop branch.
+ * If you do find a new issue, do not hesitate to open a new one. Make sure to describe any additions required in the message.
 
-6. Make sure that your code is properly formatted and does not contain any commented out code.
+ * If you want to contribute on UI theme of the application make sure you maintain the proper color theme. For reference, you can see our [UI design in figma]( https://www.figma.com/file/6xXpKNhilvlLJ6HUpC2kkC/University-APP?node-id=0%3A1)
+ * If interested, do mention the issue that you want to work on it.
 
-7. Create a pull request after making the required changes and do mention the issue number that your pull request is related to.
+ * Kindly wait for approval from the maintainers of this project before starting to work on any issue.
 
-8. Finally, wait for it to be reviewed. Make the required changes if the reviewer asks for them. 
+* *Do not make changes to the main branch.* All the changes should be made to the develop branch.
 
-9. Your pull request will be merged once everything seems okay.
+* Make sure that your code is properly formatted and does not contain any commented-out code.
 
-10. That's it! You have successfully made your contribution to the project.
+* Create a pull request after making the required changes and do mention the issue number that your pull request is related to.
+
+* Finally, wait for it to be reviewed. Make the required changes if the reviewer asks for them. 
+
+* Your pull request will be merged once everything seems okay.
+
+* That's it! You have successfully made your contribution to the project.
 <br>
+
+### Fork and download android repository
+* Commit your changes locally: git commit -a
+* Push your changes to your GitHub repo: git push
+* Browse to https://github.com/YOURGITHUBNAME/android/pulls and issue a pull request
+* Enter a description and send a pull request.
+
+
+
 
 ## GIT AND GITHUB
 
@@ -51,7 +79,7 @@ This is an important step to mark your commits to your name and email.
 
 ### FORK A PROJECT -
 
-You can use github explore - https://github.com/explore to find a project that interests you and match your skills. Once you find your cool project to workon, you can make a copy of project to your account. This process is called forking a project to your Github account. On Upper right side of project page on Github, you can see -
+You can use [github explore]( https://github.com/explore) to find a project that interests you and match your skills. Once you find your cool project to workon, you can make a copy of project to your account. This process is called forking a project to your Github account. On Upper right side of project page on Github, you can see -
 
 <p align="center">  <img  src="https://i.imgur.com/P0n6f97.png">  </p>
 
@@ -90,11 +118,11 @@ Open Source projects have a number of contributors who can push code anytime. So
     $ git push origin master
   
 
-The last command pushes the latest code to your forked repository on Github. The origin is the remote pointing to your forked repository on github.
+The last command pushes the latest code to your forked repository on Github. The origin is the remote pointing to your forked repository on GitHub.
 
 ### CREATE A NEW BRANCH FOR A FEATURE OR BUGFIX -
 
-Normally, all repositories have a master branch which is considered to remain stable and all new features should be made in a separate branch and after completion merged into master branch. So we should create a new branch for our feature or bugfix and start working on the issue.
+Normally, all repositories have a master branch that is considered to remain stable and all new features should be made in a separate branch and after completion merged into the master branch. So we should create a new branch for our feature or bugfix and start working on the issue.
 
 $ git checkout -b <feature-branch>
 This will create a new branch out of master branch. Now start working on the problem and commit your changes.
@@ -103,11 +131,11 @@ This will create a new branch out of master branch. Now start working on the pro
     $ git commit -m "<commit message>"
     
 
-The first command adds all the files or you can add specific files by removing -a and adding the file names. The second command gives a message to your changes so you can know in future what changes this commit makes. If you are solving an issue on original repository, you should add the issue number like #35 to your commit message. This will show the reference to commits in the issue.
+The first command adds all the files or you can add specific files by removing -a and adding the file names. The second command gives a message to your changes so you can know in the future what changes this commit makes. If you are solving an issue on the original repository, you should add the issue number like #35 to your commit message. This will show the reference to commits in the issue.
 
 ### REBASE YOUR FEATURE BRANCH WITH UPSTREAM-
 
-It can happen that your feature takes time to complete and other contributors are constantly pushing code. After completing the feature your feature branch should be rebase on latest changes to upstream master branch.
+It can happen that your feature takes time to complete and other contributors are constantly pushing code. After completing the feature your feature branch should be rebased on the latest changes to the upstream master branch.
 
     $ git checkout <feature-branch>
     $ git pull --rebase upstream master
@@ -116,22 +144,22 @@ Now you get the latest commits from other contributors and check that your commi
 
 ### SQUASHING YOUR COMMITS-
 
-You have completed the feature, but you have made a number of commits which make less sense. You should squash your commits to make good commits.
+You have completed the feature, but you have made a number of commits that make less sense. You should squash your commits to make good commits.
 
 $ git rebase -i HEAD~5    
 This will open an editor which will allow you to squash the commits.
 
 ### PUSH CODE AND CREATE A PULL REQUEST -
 
-Till this point you have a new branch with the feature or bugfix you want in the project you had forked. Now push your new branch to your remote fork on github.
+Till this point, you have a new branch with the feature or bugfix you want in the project you had forked. Now push your new branch to your remote fork on Github.
 
 $ git push origin <feature-branch>
     
-Now you are ready to help the project by opening a pull request means you now tell the project managers to add the feature or bugfix to original repository. You can open a pull request by clicking on green icon -
+Now you are ready to help the project by opening a pull request means you now tell the project managers to add the feature or bugfix to the original repository. You can open a pull request by clicking on the green icon -
 
 <p align="center">  <img  src="https://i.imgur.com/aGaqAD5.png">  </p>
 
-Remember your upstream base branch should be master and source should be your feature branch. Click on create pull request and add a name to your pull request. You can also describe your feature.
+Remember your upstream base branch should be master and the source should be your feature branch. Click on create a pull request and add a name to your pull request. You can also describe your feature.
 
 Awesome! You have made your first contribution.
 
@@ -139,4 +167,4 @@ Awesome! You have made your first contribution.
 <br>
 -----------------
 
-### *Note*: Always comment and provide apt descriptions wherever necessary for efficient running of the project.
+### *Note*: Always comment and provide apt descriptions wherever necessary for the efficient running of the project.
