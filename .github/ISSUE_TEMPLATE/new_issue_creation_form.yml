@@ -9,7 +9,6 @@ body:
         Thanks for taking the time to create a new issue!
   - type: markdown
     attributes:
-      label: "## Welcome!"
       value: |
         Thanks for taking the time to create a new issue!
   - type: input
