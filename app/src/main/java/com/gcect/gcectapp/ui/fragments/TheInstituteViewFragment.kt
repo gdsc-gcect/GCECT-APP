@@ -25,7 +25,7 @@ class TheInstituteViewFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.pageTitle = "About Us"
+        binding.pageTitle = getString(R.string.about_us)
         binding.pageDesc = getString(R.string.history_page)
         val instituteImg = binding.gcectAboutUsImage
         Glide.with(requireContext()).load(instituteImgUrl).into(instituteImg)

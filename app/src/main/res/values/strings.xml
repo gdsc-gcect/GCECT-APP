@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">GCECT APP</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
@@ -69,4 +69,22 @@
         ⚫ To create compassionate, responsible and innovative global citizen.
     </string>
     <string name="info_act">Nodal Information Officer : Mr. Jayanta Chowdhury \nGCECT \nMob # 9477239771 \nEmail : gcect.registrar@gmail.com </string>
+    <string name="workshop_seminar">Workshop Seminar</string>
+    <string name="welfare_association">Welfare Association</string>
+    <string name="about_us">About Us</string>
+    <string name="allow_download_permission_message">Please allow all permission to Download</string>
+    <string name="download_complete">Download Complete</string>
+    <string name="downloading" tools:ignore="TypographyEllipsis">DownLoading...</string>
+    <string name="download_percentage_completed">DownLoad : %d</string>
+    <string name="error_at_page_number">Error at page: %d</string>
+    <string name="placement_overview">Placement Overview</string>
+    <string name="placement_call">Placement Cell</string>
+    <string name="placement_call_email">For Correspondence with Training and Placement Cell: gcect@rediffmail.com</string>
+    <string name="title_empty_error_message">OOPs!! Note Title can\'t be empty</string>
+    <string name="history">HISTORY</string>
+    <string name="exam_schedule">Exam Schedules</string>
+    <string name="csi_student_chapter">CSI Student Chapter</string>
+    <string name="view_less">VIEW LESS</string>
+    <string name="view_more">VIEW MORE</string>
+
 </resources>

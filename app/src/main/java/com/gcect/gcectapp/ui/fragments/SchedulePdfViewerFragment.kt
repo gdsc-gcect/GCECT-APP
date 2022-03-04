@@ -149,7 +149,7 @@ class SchedulePdfViewerFragment() : Fragment() {
             .onPageError { page, _ ->
                 Toast.makeText(
                     context,
-                    "Error at page: $page", Toast.LENGTH_LONG
+                    getString(R.string.error_at_page_number, page), Toast.LENGTH_LONG
                 ).show()
             }
             .load()
@@ -190,7 +190,7 @@ class SchedulePdfViewerFragment() : Fragment() {
                     } else {
                         Toast.makeText(
                             requireContext(),
-                            "Please allow all permission to Download",
+                            getString(R.string.allow_download_permission_message),
                             Toast.LENGTH_SHORT
                         ).show()
                     }
@@ -206,7 +206,7 @@ class SchedulePdfViewerFragment() : Fragment() {
 
     private fun downloadPdf(url: String) {
         val pd = ProgressDialog(requireContext())
-        pd.setMessage("DownLoading...")
+        pd.setMessage(getString(R.string.downloading))
         pd.setCancelable(false)
         pd.show()
         val file = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
@@ -217,12 +217,16 @@ class SchedulePdfViewerFragment() : Fragment() {
             .setOnCancelListener { }
             .setOnProgressListener {
                 val percentage = it.currentBytes * 100 / it.totalBytes
-                pd.setMessage("DownLoad : $percentage")
+                pd.setMessage(getString(R.string.download_percentage_completed, percentage))
             }
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
                     pd.cancel()
-                    Toast.makeText(requireContext(), "Download Complete", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        getString(R.string.download_complete),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
 
                 override fun onError(error: com.downloader.Error?) {

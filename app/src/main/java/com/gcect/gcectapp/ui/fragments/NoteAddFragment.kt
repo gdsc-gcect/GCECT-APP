@@ -37,9 +37,9 @@ class NoteAddFragment : Fragment() {
 
         binding.btnSaveTask.setOnClickListener {
             if (binding.txtNoteEnteredTitle.text.isNullOrEmpty())
-                binding.txtNoteEnteredTitle.error = "OOPs!! Note Title can't be empty"
+                binding.txtNoteEnteredTitle.error = getString(R.string.title_empty_error_message)
             else if (binding.txtNoteEnteredBody.text.isNullOrEmpty())
-                binding.txtNoteEnteredTitle.error = "OOPs!! Note Body can't be empty"
+                binding.txtNoteEnteredTitle.error = getString(R.string.title_empty_error_message)
             else {
                 val title = binding.txtNoteEnteredTitle.text
                 val noteBody = binding.txtNoteEnteredBody.text

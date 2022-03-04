@@ -23,7 +23,7 @@ class HistoryViewFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.pageDesc = getString(R.string.history_page)
-        binding.pageTitle = "HISTORY"
+        binding.pageTitle = getString(R.string.history)
         val historyImg = binding.gcectAboutUsImage
         Glide.with(requireContext()).load(historyImgUrl).into(historyImg)
     }

@@ -21,7 +21,7 @@ class PlacementOverViewFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.pageTitle = "Placement Overview"
+        binding.pageTitle = getString(R.string.placement_overview)
         binding.pageDesc = getString(R.string.placement_overview_p)
     }
 }
