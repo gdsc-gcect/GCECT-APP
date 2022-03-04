@@ -22,7 +22,7 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         //variables for animation
-        // Animation topAnim,bottomAnim
+        // Animation topAnim
         val backgroundImg : ImageView = findViewById(R.id.iv_logo)
         val topAnim = AnimationUtils.loadAnimation(this,R.anim.top_navigation)
         backgroundImg.startAnimation(topAnim)
