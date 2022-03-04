@@ -6,6 +6,10 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import com.gcect.gcectapp.R
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
+
 
 class SplashScreenActivity : AppCompatActivity() {
     private val SPLASH_SCREEN_TIME_OUT = 2000
@@ -17,10 +21,18 @@ class SplashScreenActivity : AppCompatActivity() {
         )
         setContentView(R.layout.activity_splash_screen)
 
+        //variables for animation
+        // Animation topAnim
+        val backgroundImg : ImageView = findViewById(R.id.iv_logo)
+        val topAnim = AnimationUtils.loadAnimation(this,R.anim.top_navigation)
+        backgroundImg.startAnimation(topAnim)
+
+
+
         Handler().postDelayed(Runnable {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }, SPLASH_SCREEN_TIME_OUT.toLong())
+        },5000)
     }
 }
