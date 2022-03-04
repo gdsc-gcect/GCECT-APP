@@ -63,6 +63,7 @@
         <entry key="..\:/android_project_folder/Big Projects/GCECT_APP/app/src/main/res/layout/static_text_fragments_with_yellow_background.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/aboutusicon.xml" value="0.24444444444444444" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.16210739614994935" />
         <entry key="app/src/main/res/layout/drawer_layout.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="app/src/main/res/layout/home_page_bottom_sheet.xml" value="0.35572916666666665" />
@@ -71,7 +72,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
