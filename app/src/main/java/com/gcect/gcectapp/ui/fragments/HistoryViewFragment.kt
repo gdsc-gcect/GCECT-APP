@@ -17,14 +17,20 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.gcect.gcectapp.R
-import com.gcect.gcectapp.databinding.HistoryViewFragmentBinding
 
-class HistoryViewFragment: Fragment() {
+class HistoryViewFragment : Fragment() {
     private lateinit var binding: com.gcect.gcectapp.databinding.HistoryViewFragmentBinding
-    private val historyImgUrl = "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/About%20Us%2FHistory%2Fgcect_history_img.jpg?alt=media&token=e5e67b13-5254-4fa4-aebd-9e7b6d0c1f57"
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    private val historyImgUrl =
+        "https://firebasestorage.googleapis.com/v0/b/gcect-app.appspot.com/o/About%20Us%2FHistory%2Fgcect_history_img.jpg?alt=media&token=e5e67b13-5254-4fa4-aebd-9e7b6d0c1f57"
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.history_view_fragment, container, false)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.history_view_fragment, container, false)
         return binding.root
 
     }
@@ -36,13 +42,26 @@ class HistoryViewFragment: Fragment() {
         val progressbar: ProgressBar = binding.imgProgressBar
         val historyImg = binding.gcectAboutUsImage
         Glide.with(requireContext()).load(historyImgUrl)
-            .listener(object : RequestListener<Drawable>{
-                override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>?, isFirstResource: Boolean): Boolean {
+            .listener(object : RequestListener<Drawable> {
+                override fun onLoadFailed(
+                    e: GlideException?,
+                    model: Any?,
+                    target: Target<Drawable>?,
+                    isFirstResource: Boolean
+                ): Boolean {
                     progressbar.visibility = View.GONE
-                    Toast.makeText(requireContext(), "Failed to load image...", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Failed to load image...", Toast.LENGTH_SHORT)
+                        .show()
                     return false
                 }
-                override fun onResourceReady(resource: Drawable?, model: Any?, target: Target<Drawable>?, dataSource: DataSource?, isFirstResource: Boolean): Boolean {
+
+                override fun onResourceReady(
+                    resource: Drawable?,
+                    model: Any?,
+                    target: Target<Drawable>?,
+                    dataSource: DataSource?,
+                    isFirstResource: Boolean
+                ): Boolean {
                     progressbar.visibility = View.GONE
                     return false
                 }
@@ -51,6 +70,7 @@ class HistoryViewFragment: Fragment() {
             .into(historyImg)
         onBackPressed()
     }
+    
     private fun onBackPressed() {
         requireActivity()
             .onBackPressedDispatcher
@@ -64,6 +84,8 @@ class HistoryViewFragment: Fragment() {
             }
             )
     }
+
+
     /**
      * For handling navigation
      */

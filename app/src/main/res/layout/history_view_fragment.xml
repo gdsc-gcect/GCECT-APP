@@ -29,7 +29,7 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/gcectAboutUsImageFl"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             android:layout_marginTop="75dp"
             app:cardElevation="2dp"
             app:cardCornerRadius="21dp"
