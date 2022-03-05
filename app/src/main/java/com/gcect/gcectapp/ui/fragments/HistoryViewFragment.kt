@@ -70,7 +70,7 @@ class HistoryViewFragment : Fragment() {
             .into(historyImg)
         onBackPressed()
     }
-
+    
     private fun onBackPressed() {
         requireActivity()
             .onBackPressedDispatcher
@@ -84,6 +84,7 @@ class HistoryViewFragment : Fragment() {
             }
             )
     }
+
 
     /**
      * For handling navigation
