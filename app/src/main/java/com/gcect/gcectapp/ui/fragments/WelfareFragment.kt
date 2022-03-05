@@ -34,7 +34,7 @@ class WelfareFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.txtPageTitle.text = "Welfare Association"
+        binding.txtPageTitle.text = getString(R.string.welfare_association)
         binding.pdfLoadingProgress.visibility = View.VISIBLE
 
         CoroutineScope(Dispatchers.Main).launch {
@@ -87,7 +87,7 @@ class WelfareFragment : Fragment() {
             .onPageError { page, _ ->
                 Toast.makeText(
                     context,
-                    "Error at page: $page", Toast.LENGTH_LONG
+                    getString(R.string.error_at_page_number, page), Toast.LENGTH_LONG
                 ).show()
             }
             .load()

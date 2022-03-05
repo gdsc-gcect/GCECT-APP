@@ -38,7 +38,7 @@ class HistoryViewFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.pageDesc.text = getString(R.string.history_page)
-        binding.txtPageTitle.text = "HISTORY"
+        binding.txtPageTitle.text = getString(R.string.history)
         val progressbar: ProgressBar = binding.imgProgressBar
         val historyImg = binding.gcectAboutUsImage
         Glide.with(requireContext()).load(historyImgUrl)

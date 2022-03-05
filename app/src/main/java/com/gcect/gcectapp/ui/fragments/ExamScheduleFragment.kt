@@ -33,7 +33,7 @@ class ExamScheduleFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val viewPager = binding.viewPager
         val tabLayout = binding.tabLayout
-        binding.txtPageTitle.text = "Exam Schedules"
+        binding.txtPageTitle.text = getString(R.string.exam_schedule)
         val adapter = ExaminationScheduleViewPagerAdapter(parentFragmentManager, lifecycle,findNavController())
         viewPager.adapter = adapter
 

@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">GCECT APP</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
@@ -72,4 +72,21 @@
         The Institute is proud of its students who are amongst the top rankers in the West Bengal Joint Entrance Examination. The successful students to have qualified the GATE examination this year has been about 45% in the Ceramic department, 40% in Computer Science and Engg and about 25% in Information Technology departments. The final year students of Ceramic Technology has already undergone 100% recruitment in various renowned companies like Saint Gobain Glass, Jindal South West Steel., Essar Steel, Steel Authority of India., Grindwell Norton, MECON, Tata Refractories and more. The students of final year, IT and CSE departments have also been successful in getting through software giants such as TCS., Cognizant ,Wipro, Infosys, Tech. Mahindra, Accenture, Tata Elxsi and many more. Many of the students of this institute are pursuing higher studies in reputed national institutions like the IITs and NITs and many have gone abroad to Universities like Sheffield, University of Florida, University of Washington, Arizona State University, Drexel University (Pennsylvania), University of Cincinnati to name a few.\n\n
         Over the years the college has grown and learnt to dream. It strives hard to become a “Centre of Excellence” in education which, in keeping with the rich heritage of India, will stress the simultaneous development of Body, Mind and Soul and endeavour to create compassionate, responsible and innovative global citizens who are commited to the development of India. These are the true objectives of the Institution. The development is still on.
     </string>
+    <string name="workshop_seminar">Workshop Seminar</string>
+    <string name="welfare_association">Welfare Association</string>
+    <string name="about_us">About Us</string>
+    <string name="allow_download_permission_message">Please allow all permission to Download</string>
+    <string name="download_complete">Download Complete</string>
+    <string name="downloading" tools:ignore="TypographyEllipsis">DownLoading...</string>
+    <string name="download_percentage_completed">DownLoad : %d</string>
+    <string name="error_at_page_number">Error at page: %d</string>
+    <string name="placement_overview">Placement Overview</string>
+    <string name="placement_call">Placement Cell</string>
+    <string name="placement_call_email">For Correspondence with Training and Placement Cell: gcect@rediffmail.com</string>
+    <string name="title_empty_error_message">OOPs!! Note Title can\'t be empty</string>
+    <string name="history">HISTORY</string>
+    <string name="exam_schedule">Exam Schedules</string>
+    <string name="csi_student_chapter">CSI Student Chapter</string>
+    <string name="view_less">VIEW LESS</string>
+    <string name="view_more">VIEW MORE</string>
 </resources>

@@ -41,11 +41,11 @@ class ResearchDevelopmentRecyclerAdapter(
         holder.btnViewStatus.setOnClickListener {
             if (isClicked) {
                 holder.subRVProjectDetail.visibility = View.VISIBLE
-                holder.btnViewStatus.text = "VIEW LESS"
+                holder.btnViewStatus.text = context.getString(R.string.view_less)
                 isClicked = false
             } else {
                 holder.subRVProjectDetail.visibility = View.GONE
-                holder.btnViewStatus.text = "VIEW MORE"
+                holder.btnViewStatus.text = context.getString(R.string.view_more)
                 isClicked = true
             }
         }

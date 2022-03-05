@@ -34,7 +34,7 @@ class WorkshopSeminarFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.txtPageTitle.text = "Workshop Seminar"
+        binding.txtPageTitle.text = getString(R.string.workshop_seminar)
         binding.pdfLoadingProgress.visibility = View.VISIBLE
 
         CoroutineScope(Dispatchers.Main).launch {

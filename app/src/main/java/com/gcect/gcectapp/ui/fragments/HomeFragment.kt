@@ -191,7 +191,7 @@ class HomeFragment : Fragment(), OnHomeNoticeItemClickListener, OnBottomSheetIte
                     if(report.areAllPermissionsGranted()){
                         downloadPdf(url)
                     } else {
-                        Toast.makeText(requireContext(),"Please allow all permission to Download",
+                        Toast.makeText(requireContext(),getString(R.string.allow_download_permission_message),
                             Toast.LENGTH_SHORT).show()
                     }
                 }
@@ -206,7 +206,7 @@ class HomeFragment : Fragment(), OnHomeNoticeItemClickListener, OnBottomSheetIte
 
     private fun downloadPdf(url: String) {
         val pd = ProgressDialog(requireContext())
-        pd.setMessage("DownLoading...")
+        pd.setMessage(getString(R.string.downloading))
         pd.setCancelable(false)
         pd.show()
         val file = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
@@ -217,12 +217,12 @@ class HomeFragment : Fragment(), OnHomeNoticeItemClickListener, OnBottomSheetIte
             .setOnCancelListener { }
             .setOnProgressListener {
                 val percentage = it.currentBytes*100/it.totalBytes
-                pd.setMessage("DownLoad : $percentage")
+                pd.setMessage(getString(R.string.download_percentage_completed,percentage))
             }
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
                     pd.cancel()
-                    Toast.makeText(requireContext(),"Download Complete", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(),getString(R.string.download_complete), Toast.LENGTH_SHORT).show()
                 }
                 override fun onError(error: com.downloader.Error?) {
                     pd.cancel()

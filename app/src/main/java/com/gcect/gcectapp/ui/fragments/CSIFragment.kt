@@ -33,7 +33,7 @@ class CSIFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.txtPageTitle.text = "CSI Student Chapter"
+        binding.txtPageTitle.text = getString(R.string.csi_student_chapter)
         binding.pdfLoadingProgress.visibility = View.VISIBLE
 
         CoroutineScope(Dispatchers.Main).launch {
@@ -86,7 +86,7 @@ class CSIFragment : Fragment() {
             .onPageError { page, _ ->
                 Toast.makeText(
                     context,
-                    "Error at page: $page", Toast.LENGTH_LONG
+                    getString(R.string.error_at_page_number,page), Toast.LENGTH_LONG
                 ).show()
             }
             .load()

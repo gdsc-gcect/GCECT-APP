@@ -22,8 +22,8 @@ class PlacementCellFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.pageTitle = "Placement Cell"
+        binding.pageTitle = getString(R.string.placement_call)
         binding.pageDesc = getString(R.string.placement_cell_p)
-        binding.txtExtra.text = "For Correspondance with Training and Placement Cell: gcect@rediffmail.com"
+        binding.txtExtra.text = getString(R.string.placement_call_email)
     }
 }
