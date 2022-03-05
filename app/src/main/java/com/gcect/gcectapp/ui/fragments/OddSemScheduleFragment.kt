@@ -56,7 +56,7 @@ class OddSemScheduleFragment(private val navController: NavController) : Fragmen
             20 -> viewModel20.oddSemList
             else -> null
         }
-        if(list!!.isEmpty()){
+        if(list.isNullOrEmpty()){
             binding.txtDataFoundIndicator.visibility = View.VISIBLE
             binding.rvExamScheduleList.visibility = View.GONE
         } else {

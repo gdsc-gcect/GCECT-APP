@@ -13,7 +13,7 @@
 <View
     android:layout_width="80dp"
     android:layout_height="3dp"
-    android:background="@color/white"
+    android:background="@color/black"
     android:layout_gravity="center_horizontal"
     android:layout_marginTop="5dp"/>
     <TextView
