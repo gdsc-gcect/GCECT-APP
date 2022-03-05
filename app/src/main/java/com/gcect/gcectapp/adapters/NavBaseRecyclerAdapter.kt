@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gcect.gcectapp.R
@@ -105,7 +106,7 @@ class NavBaseRecyclerAdapter(
      */
     private fun navigate(clickedId: Int) {
         val id = navController.currentDestination?.id
-        navController.popBackStack(id!!, true)
+        id?.let { navController.popBackStack(it, true) }
         navController.navigate(clickedId)
     }
 

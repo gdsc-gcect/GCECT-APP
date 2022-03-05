@@ -2,17 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
-
-        <variable
-            name="pageDesc"
-            type="String" />
-        <variable
-            name="pageTitle"
-            type="String" />
-
-    </data>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,7 +21,6 @@
                 android:layout_marginStart="58dp"
                 android:layout_marginTop="25dp"
                 android:fontFamily="@font/roboto_bold"
-                android:text="@{pageTitle}"
                 android:textColor="@color/white"
                 android:textSize="23sp"
                 android:textStyle="bold" />
@@ -41,18 +29,28 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/gcectAboutUsImageFl"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             android:layout_marginTop="75dp"
             app:cardElevation="2dp"
-            app:cardCornerRadius="30dp"
+            app:cardCornerRadius="21dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="#000068"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp">
+
+            <ProgressBar
+                android:id="@+id/imgProgressBar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="visible"
+                android:layout_gravity="center"/>
 
             <ImageView
                 android:id="@+id/gcectAboutUsImage"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center" />
+                android:layout_height="150dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -68,13 +66,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/pageDesc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
                     android:fontFamily="@font/roboto_light"
-                    android:text="@{pageDesc}"
                     android:textAlignment="center"
                     android:textColor="#000062"
                     android:textSize="18sp"/>

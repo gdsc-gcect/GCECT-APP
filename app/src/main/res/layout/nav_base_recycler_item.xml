@@ -14,6 +14,8 @@
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
+        android:gravity="center_vertical"
+        android:paddingVertical="8dp"
         android:layout_marginBottom="5dp">
 
         <ImageView
@@ -33,7 +35,7 @@
             android:fontFamily="@font/roboto_medium"
             android:text="Super"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -42,12 +44,5 @@
         android:layout_height="wrap_content"
         tools:listitem="@layout/nav_sub_recycler_item"
         android:visibility="gone"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/white"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"/>
+
 </LinearLayout>

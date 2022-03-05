@@ -83,11 +83,22 @@ class SchedulePdfViewerFragment() : Fragment() {
             else -> null
         }
         CoroutineScope(Dispatchers.Main).launch {
-            retrivePDFFromUrl(list!![pos!!].pdfUrl)
+            // Retrieve PDF File from URL only when examScheduleYear is not null
+            pos?.let { pos ->
+                list?.let { list ->
+                    retrivePDFFromUrl(list[pos].pdfUrl)
+                }
+            }
+
         }
 
         binding.flBtnDownload.setOnClickListener {
-            checkDownloadPermission(list!![pos!!].pdfUrl)
+            // Check PDF File download Permission only when examScheduleYear is not null
+            pos?.let { pos ->
+                list?.let { list ->
+                    checkDownloadPermission(list[pos].pdfUrl)
+                }
+            }
         }
         onBackPressed()
     }
@@ -138,7 +149,7 @@ class SchedulePdfViewerFragment() : Fragment() {
             .onPageError { page, _ ->
                 Toast.makeText(
                     context,
-                    "Error at page: $page", Toast.LENGTH_LONG
+                    getString(R.string.error_at_page_number, page), Toast.LENGTH_LONG
                 ).show()
             }
             .load()
@@ -163,21 +174,25 @@ class SchedulePdfViewerFragment() : Fragment() {
      */
     private fun navigate(navFragId: Int) {
         val id = findNavController().currentDestination?.id
-        findNavController().popBackStack(id!!, true)
+        id?.let { findNavController().popBackStack(it, true) }
         findNavController().navigate(navFragId)
     }
 
-    private fun checkDownloadPermission(url:String){
+    private fun checkDownloadPermission(url: String) {
         Dexter.withContext(requireActivity())
             .withPermissions(
                 Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE
             ).withListener(object : MultiplePermissionsListener {
                 override fun onPermissionsChecked(report: MultiplePermissionsReport) {
-                    if(report.areAllPermissionsGranted()){
+                    if (report.areAllPermissionsGranted()) {
                         downloadPdf(url)
                     } else {
-                        Toast.makeText(requireContext(),"Please allow all permission to Download",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            requireContext(),
+                            getString(R.string.allow_download_permission_message),
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 }
 
@@ -191,24 +206,29 @@ class SchedulePdfViewerFragment() : Fragment() {
 
     private fun downloadPdf(url: String) {
         val pd = ProgressDialog(requireContext())
-        pd.setMessage("DownLoading...")
+        pd.setMessage(getString(R.string.downloading))
         pd.setCancelable(false)
         pd.show()
         val file = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-        PRDownloader.download(url, file.path, URLUtil.guessFileName(url,null,null))
+        PRDownloader.download(url, file.path, URLUtil.guessFileName(url, null, null))
             .build()
             .setOnStartOrResumeListener { }
             .setOnPauseListener { }
             .setOnCancelListener { }
             .setOnProgressListener {
-                val percentage = it.currentBytes*100/it.totalBytes
-                pd.setMessage("DownLoad : $percentage")
+                val percentage = it.currentBytes * 100 / it.totalBytes
+                pd.setMessage(getString(R.string.download_percentage_completed, percentage))
             }
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
                     pd.cancel()
-                    Toast.makeText(requireContext(),"Download Complete",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        getString(R.string.download_complete),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
+
                 override fun onError(error: com.downloader.Error?) {
                     pd.cancel()
                 }

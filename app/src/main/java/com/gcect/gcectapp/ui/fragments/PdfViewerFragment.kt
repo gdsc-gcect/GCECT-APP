@@ -114,7 +114,7 @@ class PdfViewerFragment: Fragment() {
             .onPageError { page, _ ->
                 Toast.makeText(
                     context,
-                    "Error at page: $page", Toast.LENGTH_LONG
+                    getString(R.string.error_at_page_number,page), Toast.LENGTH_LONG
                 ).show()
             }
             .load()
@@ -139,7 +139,7 @@ class PdfViewerFragment: Fragment() {
      */
     private fun navigate(navFragId: Int) {
         val id = findNavController().currentDestination?.id
-        findNavController().popBackStack(id!!, true)
+        id?.let { findNavController().popBackStack(it, true) }
         findNavController().navigate(navFragId)
     }
 
@@ -153,7 +153,7 @@ class PdfViewerFragment: Fragment() {
                     if(report.areAllPermissionsGranted()){
                         downloadPdf(url)
                     } else {
-                        Toast.makeText(requireContext(),"Please allow all permission to Download",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(),getString(R.string.allow_download_permission_message),Toast.LENGTH_SHORT).show()
                     }
                 }
 
@@ -167,7 +167,7 @@ class PdfViewerFragment: Fragment() {
 
     private fun downloadPdf(url: String) {
         val pd = ProgressDialog(requireContext())
-        pd.setMessage("DownLoading...")
+        pd.setMessage(getString(R.string.downloading))
         pd.setCancelable(false)
         pd.show()
         val file = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
@@ -178,12 +178,12 @@ class PdfViewerFragment: Fragment() {
             .setOnCancelListener { }
             .setOnProgressListener {
                 val percentage = it.currentBytes*100/it.totalBytes
-                pd.setMessage("DownLoad : $percentage")
+                pd.setMessage(getString(R.string.download_percentage_completed,percentage))
             }
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
                     pd.cancel()
-                    Toast.makeText(requireContext(),"Download Complete",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(),getString(R.string.download_complete),Toast.LENGTH_SHORT).show()
                 }
                 override fun onError(error: com.downloader.Error?) {
                     pd.cancel()
