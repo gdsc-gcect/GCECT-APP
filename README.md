@@ -64,7 +64,7 @@ Some features that are included in the app are:
   - [Dexter](https://github.com/Karumi/Dexter) - Dexter is an Android library that simplifies the process of requesting permissions at runtime. We used to take External Storage Read and Write permission from the user.
   
   ## Download 📥
-- Click [Here](https://drive.google.com/file/d/1dYNF4PMQSnzelyyqQsvGvo4NispntQu6/view?usp=sharing) to download the latest apk.
+- Click [Here](https://drive.google.com/file/d/1Td3MIqAFfMjopJWA3EFNZmiQzIClD9DT/view?usp=sharing) to download the latest apk.
 
 ## Requirements 🎯 
 - Android 6.0 and Above
