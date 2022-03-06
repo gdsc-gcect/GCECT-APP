@@ -34,7 +34,7 @@ class TheInstituteViewFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.txtPageTitle.text = "The Institute"
         val progressbar: ProgressBar = binding.imgProgressBar
-        val instituteImg = binding.gcectAboutUsImage
+        val instituteImg = binding.gcectTheInstituteImage
         Glide.with(requireContext()).load(instituteImgUrl)
             .listener(object : RequestListener<Drawable> {
                 override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>?, isFirstResource: Boolean): Boolean {

@@ -57,9 +57,13 @@ class NavSubRecyclerAdapter(
                  */
                 if (list[position]!!.navSubSubItemList[0] == null) {
                     when (list[position]!!.title) {
+                        "Vision & Mission" ->{
+                            setWhiteHamburgerIcon()
+                            navigate(R.id.visionMissionViewFragment)
+                        }
                         "The Institute" ->{
                             setWhiteHamburgerIcon()
-                            navigate(R.id.theInstituteFragment)
+                            navigate(R.id.theInstituteViewFragment)
                         }
                         "History" ->{
                             setWhiteHamburgerIcon()
