@@ -52,7 +52,7 @@
                 android:elevation="4dp">
 
                 <LinearLayout
-                    android:id="@+id/fragment_your_name_contact_us"
+                    android:id="@+id/name_contact_us_layout"
                     android:layout_width="219dp"
                     android:layout_height="45dp"
                     android:layout_marginStart="16dp"
@@ -60,6 +60,7 @@
                     android:background="@drawable/cardview_rounded">
 
                     <EditText
+                        android:id="@+id/name_contact_us_edit_text"
                         android:layout_width="159dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -72,7 +73,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/fragment_your_email_contact_us"
+                    android:id="@+id/email_contact_us_layout"
                     android:layout_width="219dp"
                     android:layout_height="45dp"
                     android:layout_marginStart="16dp"
@@ -80,6 +81,7 @@
                     android:background="@drawable/cardview_rounded">
 
                     <EditText
+                        android:id="@+id/email_contact_us_edit_text"
                         android:layout_width="159dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -92,7 +94,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/fragment_subject_contact_us"
+                    android:id="@+id/subject_contact_us_layout"
                     android:layout_width="219dp"
                     android:layout_height="45dp"
                     android:layout_marginStart="16dp"
@@ -100,6 +102,7 @@
                     android:background="@drawable/cardview_rounded">
 
                     <EditText
+                        android:id="@+id/subject_contact_us_edit_text"
                         android:layout_width="159dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -112,7 +115,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/fragment_message_contact_us"
+                    android:id="@+id/message_contact_us_layout"
                     android:layout_width="231dp"
                     android:layout_height="133dp"
                     android:layout_marginStart="10dp"
@@ -120,6 +123,7 @@
                     android:background="@drawable/rect_cardview_round">
 
                     <EditText
+                        android:id="@+id/message_contact_us_edit_text"
                         android:layout_width="159dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -132,6 +136,7 @@
                 </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/send_contact_us_button"
                     android:layout_width="127dp"
                     android:layout_height="38dp"
                     android:layout_marginStart="60dp"
