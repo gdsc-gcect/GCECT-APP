@@ -30,6 +30,15 @@
                 android:layout_marginTop="-25dp"
                 android:background="@drawable/blue_gradient_background" />
 
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:elevation="4dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/gcect_logo" />
+
             <TextView
                 android:id="@+id/txtPageTitle"
                 android:layout_width="wrap_content"
