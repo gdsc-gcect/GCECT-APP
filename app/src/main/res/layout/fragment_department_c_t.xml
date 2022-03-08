@@ -13,6 +13,7 @@
         tools:context=".ui.fragments.ResearchDevelopmentFragment">
 
         <FrameLayout
+            android:id="@+id/header_fragment_ct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/ellipse">
@@ -66,6 +67,7 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
+                android:id="@+id/ct_fragment_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -143,258 +145,267 @@
                     android:textSize="24sp" />
 
                 <LinearLayout
+                    android:id="@+id/faculty_members_ct"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
+                    android:layout_marginBottom="200dp">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:weightSum="2"
+                        android:orientation="horizontal">
 
-                        <ImageView
-                            android:layout_width="99dp"
-                            android:layout_height="97dp"
-                            android:layout_marginStart="50dp"
-                            android:layout_marginTop="15dp"
-                            android:src="@drawable/faculty_round_image_test" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="15dp"
-                            android:fontFamily="@font/roboto_bold"
-                            android:gravity="center"
-                            android:text="Dr. Kalpana Saha(Roy)"
-                            android:textAlignment="center"
-                            android:textColor="#000068"
-                            android:textSize="16sp" />
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="match_parent"
+                            <ImageView
+                                android:layout_width="99dp"
+                                android:layout_height="97dp"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/faculty_round_image_test" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="14dp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Dr. Kalpana Saha(Roy)"
+                                android:textColor="#000068"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="5dp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto_light"
+                                android:text="Asst. Professor"
+                                android:textColor="#000068"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="15dp"
-                            android:fontFamily="@font/roboto_light"
-                            android:text="Asst. Professor"
-                            android:textAlignment="center"
-                            android:textColor="#000062"
-                            android:textSize="16sp" />
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="99dp"
+                                android:layout_height="97dp"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/faculty_round_image_test" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="14dp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Dr. Kalpana Saha(Roy)"
+                                android:textColor="#000068"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="5dp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto_light"
+                                android:text="Asst. Professor"
+                                android:textColor="#000068"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:orientation="vertical">
+                        android:weightSum="2"
+                        android:orientation="horizontal">
 
-                        <ImageView
-                            android:layout_width="99dp"
-                            android:layout_height="97dp"
-                            android:layout_marginStart="50dp"
-                            android:layout_marginTop="15dp"
-                            android:src="@drawable/faculty_round_image_test" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="15dp"
-                            android:fontFamily="@font/roboto_bold"
-                            android:gravity="center"
-                            android:text="Dr. Kalpana Saha(Roy)"
-                            android:textAlignment="center"
-                            android:textColor="#000068"
-                            android:textSize="16sp" />
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="match_parent"
+                            <ImageView
+                                android:layout_width="99dp"
+                                android:layout_height="97dp"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/faculty_round_image_test" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="14dp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Dr. Kalpana Saha(Roy)"
+                                android:textColor="#000068"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="5dp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto_light"
+                                android:text="Asst. Professor"
+                                android:textColor="#000068"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="15dp"
-                            android:fontFamily="@font/roboto_light"
-                            android:text="Asst. Professor"
-                            android:textAlignment="center"
-                            android:textColor="#000062"
-                            android:textSize="16sp" />
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="99dp"
+                                android:layout_height="97dp"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/faculty_round_image_test" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="14dp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Dr. Kalpana Saha(Roy)"
+                                android:textColor="#000068"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="5dp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto_light"
+                                android:text="Asst. Professor"
+                                android:textColor="#000068"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="99dp"
+                                android:layout_height="97dp"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/faculty_round_image_test" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="14dp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Dr. Kalpana Saha(Roy)"
+                                android:textColor="#000068"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="5dp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto_light"
+                                android:text="Asst. Professor"
+                                android:textColor="#000068"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="99dp"
+                                android:layout_height="97dp"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/faculty_round_image_test" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="14dp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Dr. Kalpana Saha(Roy)"
+                                android:textColor="#000068"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="5dp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/roboto_light"
+                                android:text="Asst. Professor"
+                                android:textColor="#000068"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="99dp"
-                            android:layout_height="97dp"
-                            android:layout_marginStart="50dp"
-                            android:layout_marginTop="15dp"
-                            android:src="@drawable/faculty_round_image_test" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="15dp"
-                            android:fontFamily="@font/roboto_bold"
-                            android:gravity="center"
-                            android:text="Dr. Kalpana Saha(Roy)"
-                            android:textAlignment="center"
-                            android:textColor="#000068"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="15dp"
-                            android:fontFamily="@font/roboto_light"
-                            android:text="Asst. Professor"
-                            android:textAlignment="center"
-                            android:textColor="#000062"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="99dp"
-                            android:layout_height="97dp"
-                            android:layout_marginStart="50dp"
-                            android:layout_marginTop="15dp"
-                            android:src="@drawable/faculty_round_image_test" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="15dp"
-                            android:fontFamily="@font/roboto_bold"
-                            android:gravity="center"
-                            android:text="Dr. Kalpana Saha(Roy)"
-                            android:textAlignment="center"
-                            android:textColor="#000068"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="15dp"
-                            android:fontFamily="@font/roboto_light"
-                            android:text="Asst. Professor"
-                            android:textAlignment="center"
-                            android:textColor="#000062"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="200dp"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="99dp"
-                            android:layout_height="97dp"
-                            android:layout_marginStart="50dp"
-                            android:layout_marginTop="15dp"
-                            android:src="@drawable/faculty_round_image_test" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="15dp"
-                            android:fontFamily="@font/roboto_bold"
-                            android:gravity="center"
-                            android:text="Dr. Kalpana Saha(Roy)"
-                            android:textAlignment="center"
-                            android:textColor="#000068"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="15dp"
-                            android:fontFamily="@font/roboto_light"
-                            android:text="Asst. Professor"
-                            android:textAlignment="center"
-                            android:textColor="#000062"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="99dp"
-                            android:layout_height="97dp"
-                            android:layout_marginStart="50dp"
-                            android:layout_marginTop="15dp"
-                            android:src="@drawable/faculty_round_image_test" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="15dp"
-                            android:fontFamily="@font/roboto_bold"
-                            android:gravity="center"
-                            android:text="Dr. Kalpana Saha(Roy)"
-                            android:textAlignment="center"
-                            android:textColor="#000068"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="15dp"
-                            android:fontFamily="@font/roboto_light"
-                            android:text="Asst. Professor"
-                            android:textAlignment="center"
-                            android:textColor="#000062"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
 
 
             </LinearLayout>
