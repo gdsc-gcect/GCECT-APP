@@ -124,8 +124,14 @@
         android:name="com.gcect.gcectapp.ui.fragments.HistoryViewFragment"
         android:label="HistoryViewFragment"
         tools:layout="@layout/history_view_fragment"/>
-    <fragment android:id="@+id/theInstituteFragment"
+    <fragment
+        android:id="@+id/theInstituteViewFragment"
         android:name="com.gcect.gcectapp.ui.fragments.TheInstituteViewFragment"
         android:label="TheInstituteViewFragment"
         tools:layout="@layout/the_institute_view_fragment"/>
+    <fragment
+        android:id="@+id/visionMissionViewFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.VisionMissionViewFragment"
+        android:label="VisionMissionViewFragment"
+        tools:layout="@layout/vision_mission_view_fragment"/>
 </navigation>
