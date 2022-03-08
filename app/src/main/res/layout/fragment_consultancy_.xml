@@ -38,23 +38,19 @@
                 android:textSize="30sp" />
         </FrameLayout>
 
-        <ScrollView
+        <TextView
+            android:id="@+id/tv_consultancy"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvConsultancy"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="30dp"
-                tools:itemCount="1"
-                tools:listitem="@layout/consultancy_item"
-                />
-
-
-
-        </ScrollView>
+            android:layout_height="wrap_content"
+            android:text="@string/consultancy_item_text"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textAlignment="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
+            android:layout_marginRight="30dp"
+            />
 
 
 
