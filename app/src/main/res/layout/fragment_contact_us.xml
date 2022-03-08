@@ -30,6 +30,15 @@
                 android:layout_marginTop="-25dp"
                 android:background="@drawable/blue_gradient_background" />
 
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:elevation="4dp"
+                android:src="@drawable/gcect_logo" />
+
             <TextView
                 android:id="@+id/txtPageTitle"
                 android:layout_width="wrap_content"
@@ -44,28 +53,33 @@
                 android:textStyle="bold" />
 
             <RelativeLayout
-                android:layout_width="251dp"
+                android:layout_width="match_parent"
                 android:layout_height="419dp"
-                android:layout_marginLeft="83dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="180dp"
+                android:layout_marginEnd="30dp"
                 android:background="@drawable/rectangle_2"
                 android:elevation="4dp">
 
                 <LinearLayout
                     android:id="@+id/name_contact_us_layout"
-                    android:layout_width="219dp"
+                    android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
                     android:background="@drawable/cardview_rounded">
 
                     <EditText
                         android:id="@+id/name_contact_us_edit_text"
-                        android:layout_width="159dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="@null"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_light"
                         android:hint="Your Name"
+                        android:maxLines="1"
                         android:padding="8dp"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black" />
@@ -74,19 +88,23 @@
 
                 <LinearLayout
                     android:id="@+id/email_contact_us_layout"
-                    android:layout_width="219dp"
+                    android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="90dp"
+                    android:layout_marginEnd="16dp"
                     android:background="@drawable/cardview_rounded">
 
                     <EditText
                         android:id="@+id/email_contact_us_edit_text"
-                        android:layout_width="159dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="@null"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_light"
                         android:hint="Your Email"
+                        android:maxLines="1"
                         android:padding="8dp"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black" />
@@ -95,19 +113,23 @@
 
                 <LinearLayout
                     android:id="@+id/subject_contact_us_layout"
-                    android:layout_width="219dp"
+                    android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="160dp"
+                    android:layout_marginEnd="16dp"
                     android:background="@drawable/cardview_rounded">
 
                     <EditText
                         android:id="@+id/subject_contact_us_edit_text"
-                        android:layout_width="159dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="@null"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_light"
                         android:hint="Subject"
+                        android:maxLines="1"
                         android:padding="8dp"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black" />
@@ -116,16 +138,17 @@
 
                 <LinearLayout
                     android:id="@+id/message_contact_us_layout"
-                    android:layout_width="231dp"
+                    android:layout_width="match_parent"
                     android:layout_height="133dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="220dp"
+                    android:layout_marginEnd="10dp"
                     android:background="@drawable/rect_cardview_round">
 
                     <EditText
                         android:id="@+id/message_contact_us_edit_text"
-                        android:layout_width="159dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:background="@null"
                         android:hint="Your Message"
@@ -139,7 +162,7 @@
                     android:id="@+id/send_contact_us_button"
                     android:layout_width="127dp"
                     android:layout_height="38dp"
-                    android:layout_marginStart="60dp"
+                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="370dp"
                     android:background="@drawable/blue_rounded_rectangle"
                     android:text="SEND"
@@ -197,8 +220,8 @@
                     <ImageView
                         android:layout_width="254dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="90dp"
                         android:layout_marginStart="22dp"
+                        android:layout_marginTop="90dp"
                         android:src="@drawable/ic_line_separater" />
 
                     <TextView
@@ -214,8 +237,8 @@
                     <ImageView
                         android:layout_width="254dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="139dp"
                         android:layout_marginStart="22dp"
+                        android:layout_marginTop="139dp"
                         android:src="@drawable/ic_line_separater" />
 
                     <TextView
@@ -231,8 +254,8 @@
                     <ImageView
                         android:layout_width="254dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="183dp"
                         android:layout_marginStart="22dp"
+                        android:layout_marginTop="183dp"
                         android:src="@drawable/ic_line_separater" />
 
                     <TextView

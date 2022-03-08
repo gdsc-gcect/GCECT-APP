@@ -46,12 +46,10 @@
     Then came Dr. B. N. Samaddar as the Principal of the College, who was trained in MIT, USA. He brought a sophisticated touch of modern ceramics like Nuclear Ceramics, Space Ceramics, Electronic and Magnetic Ceramics, Bio-Ceramics, Piezoelectrics and Ferroelectrics by continuous enriching the courses with a strong emphasis on Materials Science.\n\n
     This college has seen the addition of two new B.Tech courses in Information Technology and Computer Science and Engineering which was initiated under the West Bengal University of Technology in the year 2000 and 2001 as well as the M.Tech course in Ceramic Technology which was introduced in the year 2006. The B.Tech and M.Tech courses of Ceramic Technology and the B.Tech course in Information Technology has already been accredited by the National Board of Accreditation (NBA). The institute has also recently gained approval from AICTE to begin the M. Tech. course in Information Technology.</string>
     <string name="vision_and_mission_p1">To cultivate excellence in various fields of engineering and technology by imparting core knowledge to the students and to transform the institution into a center of academic excellence and advanced research apart from producing skilled technologist.</string>
-    <string name="vision_and_mission_p2">
-        ⚫ To impart quality technical education that will produce globally competitive engineers and technologists.\n
-        ⚫ To inculcate entrepreneurial skill and leadership quality amongst potential students.\n
-        ⚫ To stress upon acquiring advanced knowledge and research acumen among faculties and students.\n
-        ⚫ To create compassionate, responsible and innovative global citizen.
-    </string>
+    <string name="vision_and_mission_p2_1">To impart quality technical education that will produce globally competitive engineers and technologists.</string>
+    <string name="vision_and_mission_p2_2">To inculcate entrepreneurial skill and leadership quality amongst potential students.</string>
+    <string name="vision_and_mission_p2_3">To stress upon acquiring advanced knowledge and research acumen among faculties and students.</string>
+    <string name="vision_and_mission_p2_4">To create compassionate, responsible and innovative global citizen.</string>
     <string name="info_act">Nodal Information Officer : Mr. Jayanta Chowdhury \nGCECT \nMob # 9477239771 \nEmail : gcect.registrar@gmail.com </string>
     <string name="the_institute_p1">
         An educational institute is a place where young minds are nurtured in the best possible way, where their skills are developed in a specific field. A good foothold is therefore essential, and the Govt. College of Engineering and Ceramic Technology is such an institute, where students are given the best platform to exhibit their talents. We take this opportunity, to introduce ourselves, as one of the leading government engineering colleges under the Department of Higher Education in the eastern part of India.\n\n
@@ -96,5 +94,4 @@
     <string name="cse_p1">The B.Tech. course is duly approved by the All India Council for Technical Education (AICTE), Government of India and the Department of Higher Education, Government of West Bengal. The duration of study of this course is 4 years (8 semesters) and total intake in each discipline is 40+8 (lateral entry) students. The B.Tech course in Ceramic Technology is NBA accredited.</string>
     <string name="cse_p2">"The Institute has been offering a full time postgraduate course leading to M. Tech in Ceramic Technology since 2006. The sanctioned intake of students for the M.Tech course is 18.The M.Tech. course in Ceramic Technology is NBA accredited.  "</string>
     <string name="cse_p3">This academic department offers guidance and facilites for Ph.D.programe. The Institute has collaborated with reputed institutions at national and international level for postgraduate, project and Ph.D programmes.The Petronus University of Malaysia, Northern University in Saudi Arabia, Curtin University in Australia, Jadavpur University, Calcutta University, Presidency University, CGCRI, Saha Institute of Nuclear Physics are the ones to name a few.</string>
-
 </resources>
