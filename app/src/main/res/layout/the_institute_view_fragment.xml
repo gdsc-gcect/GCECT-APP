@@ -46,7 +46,7 @@
                 android:layout_gravity="center"/>
 
             <ImageView
-                android:id="@+id/gcectAboutUsImage"
+                android:id="@+id/gcectTheInstituteImage"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:adjustViewBounds="true"
