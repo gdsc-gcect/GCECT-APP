@@ -3,10 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> testing
         <entry key="..\:/Gssoc22/GCECT-APP/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2005" />
         <entry key="..\:/Gssoc22/GCECT-APP/app/src/main/res/drawable/about_us_icon.xml" value="0.2005" />
         <entry key="..\:/Gssoc22/GCECT-APP/app/src/main/res/drawable/aboutusicon.xml" value="0.2005" />
@@ -137,11 +133,9 @@
         <entry key="..\:/android_project_folder/Test Projects/GCECT-APP/app/src/main/res/drawable/hamburger_icon_blue.xml" value="0.1405" />
         <entry key="..\:/android_project_folder/Test Projects/GCECT-APP/app/src/main/res/drawable/hamburger_icon_white.xml" value="0.1405" />
         <entry key="..\:/android_project_folder/Test Projects/GCECT-APP/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-<<<<<<< HEAD
         <entry key="..\:/android_project_folder/Test Projects/GCECT-APP/app/src/main/res/layout/fragment_consultancy_.xml" value="0.25416666666666665" />
         <entry key="..\:/android_project_folder/Test Projects/GCECT-APP/app/src/main/res/layout/fragment_contact_us.xml" value="0.25416666666666665" />
         <entry key="..\:/android_project_folder/Test Projects/GCECT-APP/app/src/main/res/layout/fragment_department_c_t.xml" value="0.25416666666666665" />
-=======
         <entry key="..\:/android_project_folder/Test Projects/GCECT-APP/app/src/main/res/layout/collaboration_recyclerview_item.xml" value="0.11302083333333333" />
         <entry key="..\:/android_project_folder/Test Projects/GCECT-APP/app/src/main/res/layout/fragment_collaboration_.xml" value="0.24010416666666667" />
         <entry key="..\:/android_project_folder/Test Projects/GCECT-APP/app/src/main/res/layout/fragment_consultancy_.xml" value="0.25416666666666665" />
@@ -151,7 +145,6 @@
         <entry key="..\:/android_project_folder/Test Projects/GCECT-APP/app/src/main/res/layout/note_recycler_item.xml" value="0.25416666666666665" />
         <entry key="..\:/android_project_folder/Test Projects/GCECT-APP/app/src/main/res/layout/patents_recyclerview_item.xml" value="0.25416666666666665" />
         <entry key="..\:/android_project_folder/Test Projects/GCECT-APP/app/src/main/res/mipmap-anydpi-v26/gcecet_app_icon.xml" value="0.124" />
->>>>>>> testing
         <entry key="app/src/main/res/drawable/aboutusicon.xml" value="0.24444444444444444" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/drawer_layout.xml" value="0.35572916666666665" />
@@ -159,9 +152,7 @@
         <entry key="app/src/main/res/layout/home_page_bottom_sheet.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/home_page_bottom_sheet_list_item.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/slider_item.xml" value="0.17299898682877407" />
-=======
         <entry key="..\:/android_project_folder/Test Projects/GCECT-APP/app/src/main/res/layout/fragment_consultancy_.xml" value="0.10643115942028986" />
->>>>>>> testing2
       </map>
     </option>
   </component>
