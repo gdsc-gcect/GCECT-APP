@@ -17,6 +17,8 @@ import com.gcect.gcectapp.model.FacultyModel
 class DepartmentCSFragment : Fragment() {
 
     private lateinit var facultyMembersRecyclerView: RecyclerView
+    private lateinit var departmentH1: TextView
+    private lateinit var departmentH2: TextView
     private lateinit var paraFirst: TextView
     private lateinit var headFirst: TextView
     private lateinit var paraSecond: TextView
@@ -36,12 +38,16 @@ class DepartmentCSFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         facultyMembersRecyclerView = view.findViewById(R.id.faculty_members_rv)
+        departmentH1 = view.findViewById(R.id.departmentH1)
+        departmentH2 = view.findViewById(R.id.departmentH2)
         paraFirst = view.findViewById(R.id.p1)
         headFirst = view.findViewById(R.id.h1)
         paraSecond = view.findViewById(R.id.p2)
         headSecond = view.findViewById(R.id.h2)
         paraThree = view.findViewById(R.id.p3)
 
+        departmentH1.text = "COMPUTER SCIENCE"
+        departmentH2.text = "& ENGG."
         paraFirst.visibility = View.GONE
         headFirst.text = "B.TECH"
         paraSecond.text = R.string.cs_p1.toString()

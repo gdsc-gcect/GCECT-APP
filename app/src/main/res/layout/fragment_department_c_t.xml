@@ -51,15 +51,17 @@
                     android:textSize="23sp" />
 
                 <TextView
+                    android:id="@+id/departmentH1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="CERAMIC "
+                    android:text="CERAMIC"
                     android:textColor="#000068"
                     android:textSize="22sp" />
 
                 <TextView
+                    android:id="@+id/departmentH2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
