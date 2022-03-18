@@ -1,9 +1,9 @@
-package eu.deysouvik.test
+package com.gcect.gcectapp.ui.fragments
 
-import ViewModel.CollaborationViewmodel
-import ViewModel.PatentViewmodel
-import adapters.CollaborationRecyclerAdapter
-import adapters.PatentRecyclerAdapter
+import com.gcect.gcectapp.viewmodels.CollaborationViewmodel
+import com.gcect.gcectapp.viewmodels.PatentViewmodel
+import com.gcect.gcectapp.adapters.CollaborationRecyclerAdapter
+import com.gcect.gcectapp.adapters.PatentRecyclerAdapter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater

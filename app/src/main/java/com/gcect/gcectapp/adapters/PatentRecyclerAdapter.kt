@@ -1,4 +1,4 @@
-package adapters
+package com.gcect.gcectapp.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -14,8 +14,7 @@ import com.gcect.gcectapp.model.PatentDetails
 class PatentRecyclerAdapter (
     private val context: Context,
     private val patentDetailList: List<PatentDetails>
-): RecyclerView.Adapter<PatentRecyclerAdapter
-.PatentRecyclerViewHolder>() {
+): RecyclerView.Adapter<PatentRecyclerAdapter.PatentRecyclerViewHolder>() {
 
 
     override fun onCreateViewHolder(

@@ -97,6 +97,10 @@ class NavSubRecyclerAdapter(
                             setBlueHamburgerIcon()
                             navigate(R.id.placementOverViewFragment)
                         }
+                        "Collaboration" -> {
+                            setBlueHamburgerIcon()
+                            navigate(R.id.collaboration_Fragment)
+                        }
                     }
                 }
 

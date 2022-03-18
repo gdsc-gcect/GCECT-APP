@@ -1,4 +1,4 @@
-package ViewModel
+package com.gcect.gcectapp.viewmodels
 
 import androidx.lifecycle.ViewModel
 import com.gcect.gcectapp.model.CollaborationDetails

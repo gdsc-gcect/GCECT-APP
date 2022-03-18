@@ -1,4 +1,4 @@
-package adapters
+package com.gcect.gcectapp.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -15,8 +15,7 @@ class CollaborationRecyclerAdapter (
     private val context: Context,
     private val collaborationDetailList: List<CollaborationDetails>
 ):
-    RecyclerView.Adapter<CollaborationRecyclerAdapter
-    .CollaborationRecyclerViewHolder>() {
+    RecyclerView.Adapter<CollaborationRecyclerAdapter.CollaborationRecyclerViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -28,7 +27,7 @@ class CollaborationRecyclerAdapter (
     }
 
     override fun onBindViewHolder(
-        holder:CollaborationRecyclerViewHolder,
+        holder: CollaborationRecyclerViewHolder,
         position: Int
     ) {
         holder.txtcollaborationDetail.text=collaborationDetailList[position].collaborationtext
