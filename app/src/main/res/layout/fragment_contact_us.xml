@@ -75,8 +75,6 @@
                         android:id="@+id/name_contact_us_edit_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:maxLines="1"
-                        android:ellipsize="end"
                         android:layout_gravity="center"
                         android:background="@null"
                         android:ellipsize="end"
@@ -102,8 +100,6 @@
                         android:id="@+id/email_contact_us_edit_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:maxLines="1"
-                        android:ellipsize="end"
                         android:layout_gravity="center"
                         android:background="@null"
                         android:ellipsize="end"
@@ -129,8 +125,6 @@
                         android:id="@+id/subject_contact_us_edit_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:maxLines="1"
-                        android:ellipsize="end"
                         android:layout_gravity="center"
                         android:background="@null"
                         android:ellipsize="end"
@@ -276,16 +270,8 @@
                         android:text="@string/email_contact_us"
                         android:textColor="@color/white" />
 
-
                 </RelativeLayout>
-
-
             </RelativeLayout>
-
-
         </FrameLayout>
-
     </ScrollView>
-
-
 </FrameLayout>
