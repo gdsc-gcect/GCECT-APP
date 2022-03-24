@@ -270,16 +270,8 @@
                         android:text="@string/email_contact_us"
                         android:textColor="@color/white" />
 
-
                 </RelativeLayout>
-
-
             </RelativeLayout>
-
-
         </FrameLayout>
-
     </ScrollView>
-
-
 </FrameLayout>

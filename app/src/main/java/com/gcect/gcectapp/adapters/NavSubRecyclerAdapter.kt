@@ -13,6 +13,7 @@ import androidx.navigation.NavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gcect.gcectapp.R
+import com.gcect.gcectapp.R.id.visionMissionViewFragment
 import com.gcect.gcectapp.model.NavSubItem
 import com.gcect.gcectapp.viewmodels.MainActivityViewModel
 import com.gcect.gcectapp.viewmodels.PdfViewerViewModel
@@ -59,7 +60,7 @@ class NavSubRecyclerAdapter(
                     when (list[position]!!.title) {
                         "Vision & Mission" -> {
                             setWhiteHamburgerIcon()
-                            navigate(R.id.visionMissionViewFragment)
+                            navigate(visionMissionViewFragment)
                         }
                         "The Institute" -> {
                             setWhiteHamburgerIcon()
