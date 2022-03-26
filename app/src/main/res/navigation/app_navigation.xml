@@ -30,6 +30,11 @@
         android:label="fragment_department_c_t"
         tools:layout="@layout/fragment_department_c_t" />
     <fragment
+        android:id="@+id/departmentCSFragment"
+        android:name="com.gcect.gcectapp.ui.fragments.DepartmentCSFragment"
+        android:label="fragment_department_c_s"
+        tools:layout="@layout/fragment_department_c_t" />
+    <fragment
         android:id="@+id/scientificVoyageFragment"
         android:name="com.gcect.gcectapp.ui.fragments.ScientificVoyageFragment"
         android:label="ScienceVoyageFragment"

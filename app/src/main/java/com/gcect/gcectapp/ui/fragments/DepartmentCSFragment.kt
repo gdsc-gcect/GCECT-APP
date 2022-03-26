@@ -5,7 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
+import android.widget.TextView
+import androidx.core.view.isGone
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gcect.gcectapp.R
@@ -13,10 +14,16 @@ import com.gcect.gcectapp.adapters.FacultyAdapter
 import com.gcect.gcectapp.databinding.FragmentDepartmentCTBinding
 import com.gcect.gcectapp.model.FacultyModel
 
-class DepartmentCTFragment : Fragment() {
+class DepartmentCSFragment : Fragment() {
 
-    private lateinit var binding: FragmentDepartmentCTBinding
     private lateinit var facultyMembersRecyclerView: RecyclerView
+    private lateinit var departmentH1: TextView
+    private lateinit var departmentH2: TextView
+    private lateinit var paraFirst: TextView
+    private lateinit var headFirst: TextView
+    private lateinit var paraSecond: TextView
+    private lateinit var headSecond: TextView
+    private lateinit var paraThree: TextView
     private lateinit var facultyList: ArrayList<FacultyModel>
 
     override fun onCreateView(
@@ -24,15 +31,30 @@ class DepartmentCTFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_department_c_t, container, false)
-        return binding.root
+        return inflater.inflate(R.layout.fragment_department_c_t, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.ctFragment = this
 
-        facultyMembersRecyclerView = binding.facultyMembersRv
+        facultyMembersRecyclerView = view.findViewById(R.id.faculty_members_rv)
+        departmentH1 = view.findViewById(R.id.departmentH1)
+        departmentH2 = view.findViewById(R.id.departmentH2)
+        paraFirst = view.findViewById(R.id.p1)
+        headFirst = view.findViewById(R.id.h1)
+        paraSecond = view.findViewById(R.id.p2)
+        headSecond = view.findViewById(R.id.h2)
+        paraThree = view.findViewById(R.id.p3)
+
+        departmentH1.text = "COMPUTER SCIENCE"
+        departmentH2.text = "& ENGG."
+        paraFirst.visibility = View.GONE
+        headFirst.text = "B.TECH"
+        paraSecond.text = R.string.cs_p1.toString()
+        headSecond.visibility = View.GONE
+        paraThree.visibility = View.GONE
+
+
         facultyMembersRecyclerView.layoutManager =
             GridLayoutManager(requireContext(), 2)
         facultyList = ArrayList()
