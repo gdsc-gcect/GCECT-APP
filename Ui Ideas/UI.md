@@ -9,3 +9,9 @@
 |**REISSUE BOOK**|**RETURN BOOK**|
 
 
+### Library Mangement Home UI Screen
+|![](https://github.com/Kunal-Kayal/EarthQuakeAndroidApp/blob/main/Ui/LibrARY%20hOME%20PAGE%20(1).png)|![](https://github.com/Kunal-Kayal/EarthQuakeAndroidApp/blob/main/Ui/Android%20-%206.png)|
+|:---:|:---:|
+|**Home Page**|**Prevew Page**|
+
+
