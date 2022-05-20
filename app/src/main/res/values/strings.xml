@@ -107,4 +107,10 @@
     <string name="prof_binay_k_dutta_chariman_west_bengal_pollution_control_board_chairman">Prof. Binay K. Dutta, Chariman, West Bengal Pollution Control Board – Chairman</string>
     <string name="accounts_officer_n_shri_kanti_kamal_sen">Accounts Officer:\n Shri Kanti Kamal Sen</string>
     <string name="registrar_n_shri_jayanta_choudhury">Registrar:\n Shri Jayanta Choudhury</string>
+    <string name="gcect">GCECT</string>
+    <string name="NotificationTitle">Downloading...</string>
+    <string name="NotificationContent">GCECT</string>
+    <string name="notification_channel_id">all_notifications</string>
+    <string name="notification_channel_name">General Notifications</string>
+    <string name="notification_channel_desc">This is default channel used for all other notifications</string>
 </resources>

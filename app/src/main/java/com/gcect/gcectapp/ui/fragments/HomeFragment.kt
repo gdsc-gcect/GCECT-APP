@@ -1,9 +1,14 @@
 package com.gcect.gcectapp.ui.fragments
 
 import android.Manifest
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
 import android.app.ProgressDialog
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.util.Log
@@ -15,6 +20,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.app.NotificationCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -25,13 +31,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
-import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.gcect.gcectapp.R
 import com.gcect.gcectapp.adapters.*
 import com.gcect.gcectapp.databinding.FragmentHomeBinding
+import com.gcect.gcectapp.ui.activity.MainActivity
 import com.gcect.gcectapp.viewmodels.HomeFragmentViewModel
 import com.gcect.gcectapp.viewmodels.PdfViewerViewModel
 import com.gcect.gcectapp.viewmodels.PdfViewerViewModelFactory
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.button.MaterialButton
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
@@ -47,7 +54,6 @@ class HomeFragment : Fragment(), OnHomeNoticeItemClickListener, OnBottomSheetIte
     private lateinit var pdfLoaderViewModel: PdfViewerViewModel
     //#1 Defining a BottomSheetBehavior instance
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
-
     /**
      * 1 -> for upper blue notice
      * 2 -> for red notice
@@ -87,7 +93,7 @@ class HomeFragment : Fragment(), OnHomeNoticeItemClickListener, OnBottomSheetIte
          *  for auto image sliding
          */
         val sliderView = binding.imageSlider
-        val sliderAdapter = HomeAutoSliderAdapter(requireActivity(),viewModel.autoSliderImgList)
+        val sliderAdapter = HomeAutoSliderAdapter(requireActivity(), viewModel.autoSliderImgList)
         sliderView.setSliderAdapter(sliderAdapter)
         sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM)
         sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION)
@@ -96,7 +102,7 @@ class HomeFragment : Fragment(), OnHomeNoticeItemClickListener, OnBottomSheetIte
         /**
          * for notice list showing
          */
-        val noticeAdapter = HomeNoticeRecyclerAdapter(viewModel.noticeItemList,this)
+        val noticeAdapter = HomeNoticeRecyclerAdapter(viewModel.noticeItemList, this)
         binding.rvNotice.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.rvNotice.adapter = noticeAdapter
@@ -104,7 +110,8 @@ class HomeFragment : Fragment(), OnHomeNoticeItemClickListener, OnBottomSheetIte
         /**
          * for gate ranker list showing
          */
-        val gateRankerAdapter = HomeGateRankerRecyclerAdapter(requireContext(),viewModel.gateRankerList)
+        val gateRankerAdapter =
+            HomeGateRankerRecyclerAdapter(requireContext(), viewModel.gateRankerList)
         binding.rvGateRanker.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.rvGateRanker.adapter = gateRankerAdapter
@@ -112,7 +119,8 @@ class HomeFragment : Fragment(), OnHomeNoticeItemClickListener, OnBottomSheetIte
         /**
          * for general notice list showing
          */
-        val generalNoticeAdapter = HomeBottomSheetRecyclerAdapter(viewModel.bottomSheetItemList,this)
+        val generalNoticeAdapter =
+            HomeBottomSheetRecyclerAdapter(viewModel.bottomSheetItemList, this)
         val rvGeneralNotice =
             binding.layoutBottomSheet.rootView.findViewById<RecyclerView>(R.id.rvGeneralNotice)
         rvGeneralNotice.layoutManager = LinearLayoutManager(requireContext())
@@ -122,10 +130,12 @@ class HomeFragment : Fragment(), OnHomeNoticeItemClickListener, OnBottomSheetIte
          * for red notice list showing
          */
 
-        val redNoticeAdapter = RedColouredHomeNoticeRecyclerAdapter(viewModel.redNoticeItemList,this)
+        val redNoticeAdapter =
+            RedColouredHomeNoticeRecyclerAdapter(viewModel.redNoticeItemList, this)
         binding.rvRedNotice.layoutManager =
-            GridLayoutManager(requireContext(),2)
+            GridLayoutManager(requireContext(), 2)
         binding.rvRedNotice.adapter = redNoticeAdapter
+
     }
 
     fun onGeneralNoticeClicked() {
@@ -218,6 +228,7 @@ class HomeFragment : Fragment(), OnHomeNoticeItemClickListener, OnBottomSheetIte
             .setOnProgressListener {
                 val percentage = it.currentBytes*100/it.totalBytes
                 pd.setMessage(getString(R.string.download_percentage_completed,percentage))
+                showNotification(percentage)
             }
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
@@ -228,6 +239,51 @@ class HomeFragment : Fragment(), OnHomeNoticeItemClickListener, OnBottomSheetIte
                     pd.cancel()
                 }
             })
+
+    }
+
+    fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channelId = getString(R.string.notification_channel_id)
+            val mChannel = NotificationChannel(
+                channelId,
+                getString(R.string.notification_channel_name),
+                NotificationManager.IMPORTANCE_DEFAULT
+            )
+            mChannel.description = getString(R.string.notification_channel_desc)
+
+            val notificationManager =
+                requireContext().getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(mChannel)
+        }
+    }
+
+    fun showNotification(progress: Long){
+        createNotificationChannel()
+        val channelId = getString(R.string.notification_channel_id)
+        val intent = Intent(context, MainActivity::class.java)
+        val pendingIntent = PendingIntent.getActivity(this.context, 0, intent, 0);
+        val builder = NotificationCompat.Builder(
+            requireContext(),
+            channelId
+        ) // Create notification with channel Id
+            .setSmallIcon(R.drawable.about_us_icon)
+            .setContentTitle(getString(R.string.NotificationTitle))
+            .setContentText(getString(R.string.NotificationContent))
+            .setPriority(NotificationCompat.PRIORITY_MAX)
+        builder.setContentIntent(pendingIntent).setAutoCancel(true)
+
+        val mNotificationManager = requireContext().getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+        if(progress.toInt()!=100) {
+            builder.setProgress(100, progress.toInt(), false)
+            mNotificationManager.notify(123, builder.build())
+        } else {
+            builder.setProgress(0, 0, false)
+            builder.setContentText("Download Complete")
+            mNotificationManager.notify(123, builder.build())
+        }
+
     }
 
     override fun onBottomSheetItemClick(pos: Int, title:String) {
