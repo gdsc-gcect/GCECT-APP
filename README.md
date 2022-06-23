@@ -85,7 +85,7 @@ For the time being we are working with static datas of the website. After comple
 ## 😎Maintainers
 <table>
   <tbody><tr>
-    <td align="center"><a href="https://github.com/theDIRone"><img alt="" src="https://avatars.githubusercontent.com/sitamadex11" width="200px;"><br><sub><b> Sitam Sardar </b></sub></a><br></td> </a></td>
+    <td align="center"><a href="https://github.com/theDIRone"><img alt="" src="https://avatars.githubusercontent.com/theDIRone" width="200px;"><br><sub><b> Sitam Sardar </b></sub></a><br></td> </a></td>
         <td align="center"><a href="https://github.com/Kunal-Kayal"><img alt="" src="https://avatars.githubusercontent.com/Kunal-Kayal" width="200px;"><br><sub><b> Kunal Kayal </b></sub></a><br></td> </a></td>
             <td align="center"><a href="https://github.com/chayan-dev"><img alt="" src="https://avatars.githubusercontent.com/chayan-dev" width="200px;"><br><sub><b> Chayan Das </b></sub></a><br></td> </a></td>
 	    <td align="center"><a href="https://github.com/cdhiraj40"><img alt="" src="https://avatars.githubusercontent.com/cdhiraj40" width="200px;"><br><sub><b> Dhiraj Chauhan </b></sub></a><br></td> </a></td>
